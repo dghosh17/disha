@@ -166,5 +166,13 @@ button:hover {
 }
 
 .projects .box {
-    margin-bottom: 40px; /* Increase gap between project boxes */
+    margin-bottom: 40px; /* Default gap between project boxes */
+}
+
+.projects .box:nth-of-type(2) {
+    margin-bottom: 60px; /* Larger gap below the second project */
+}
+
+.projects .box:last-of-type {
+    margin-bottom: 80px; /* Larger gap below the last project */
 }
