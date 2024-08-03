@@ -49,7 +49,7 @@ header h1 {
     margin: 0;
 }
 
-.introduction, .gallery, .contact {
+.introduction, .gallery, .contact, .projects {
     padding: 40px 20px;
     text-align: center;
     margin-bottom: 20px;
@@ -61,7 +61,8 @@ header h1 {
 
 .introduction .box,
 .gallery .box,
-.contact .box {
+.contact .box,
+.projects .box {
     background-color: #f0e5d8; /* Light light brown */
     padding: 20px;
     border-radius: 10px;
@@ -75,7 +76,8 @@ header h1 {
 
 .introduction .box:last-of-type,
 .gallery .box:last-of-type,
-.contact .box:last-of-type {
+.contact .box:last-of-type,
+.projects .box:last-of-type {
     margin-bottom: 40px; /* Larger gap below the last box */
 }
 
