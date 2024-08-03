@@ -70,6 +70,7 @@ h2 {
     max-width: 600px;
     width: 100%;
     transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 20px;
 }
 
 .box:hover {
@@ -82,18 +83,20 @@ h2 {
     max-width: 600px;
     margin: auto;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .carousel-slide {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: 100%;
 }
 
 .carousel-slide img {
-    width: 600px;
-    height: 400px;
+    flex: 0 0 100%; /* Ensures that each image takes up the full width of the carousel container */
+    height: auto; /* Adjust height automatically to maintain aspect ratio */
+    max-width: 100%; /* Ensures image does not overflow the container */
     border-radius: 10px;
-    object-fit: cover;
 }
 
 .prev-btn, .next-btn {
@@ -160,4 +163,8 @@ button {
 
 button:hover {
     background-color: #34495e;
+}
+
+.projects .box {
+    margin-bottom: 40px; /* Increase gap between project boxes */
 }
