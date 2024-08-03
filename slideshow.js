@@ -11,7 +11,7 @@ function showSlide(index) {
         currentSlide = totalSlides - 1;
     } else {
         currentSlide = index;
-    }
+    } 
 
     // Calculate the new transform value
     const slideWidth = document.querySelector('.carousel-container').offsetWidth;
