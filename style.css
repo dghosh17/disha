@@ -72,6 +72,7 @@ header h1 {
     width: 100%;
     margin-bottom: 20px; /* Smaller gap between boxes */
     transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center; /* Centering the text inside the boxes */
 }
 
 .introduction .box:last-of-type,
