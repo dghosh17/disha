@@ -93,7 +93,7 @@ h2 {
 }
 
 .carousel-slide img {
-    flex: 0 0 100%; /* Ensures that each image takes up the full width of the carousel container */
+    flex: 0 0 100%; /* Ensures each image takes up the full width of the carousel container */
     height: auto; /* Adjust height automatically to maintain aspect ratio */
     max-width: 100%; /* Ensures image does not overflow the container */
     border-radius: 10px;
