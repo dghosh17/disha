@@ -80,6 +80,16 @@ h2 {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.gallery-item {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.gallery-item:hover {
+    transform: rotateY(180deg);
 }
 
 .gallery-container img {
@@ -88,11 +98,7 @@ h2 {
     object-fit: cover;
     border: 1px solid #ddd;
     border-radius: 5px;
-    transition: transform 0.2s;
-}
-
-.gallery-container img:hover {
-    transform: scale(1.05);
+    backface-visibility: hidden;
 }
 
 form {
