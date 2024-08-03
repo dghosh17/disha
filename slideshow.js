@@ -14,6 +14,9 @@ function showSlide(index) {
 
     const offset = -currentSlide * 100;
     document.querySelector('.carousel-slide').style.transform = `translateX(${offset}%)`;
+
+    // Rotate arrows if needed
+    rotateArrows();
 }
 
 function nextSlide() {
@@ -22,6 +25,14 @@ function nextSlide() {
 
 function prevSlide() {
     showSlide(currentSlide - 1);
+}
+
+function rotateArrows() {
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    prevBtn.style.transform = 'rotate(0deg)'; // Ensure the previous button is upright
+    nextBtn.style.transform = 'rotate(0deg)'; // Ensure the next button is upright
 }
 
 // Initialize the carousel
