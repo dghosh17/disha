@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disha Ghosh's Website</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Futura:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -26,16 +26,14 @@
     <section class="gallery">
         <div class="box">
             <h2>Gallery</h2>
-            <div class="gallery-container">
-                <div class="gallery-item">
+            <div class="carousel-container">
+                <div class="carousel-slide">
                     <img src="grainger_engineering.jpg" alt="Grainger Engineering">
-                </div>
-                <div class="gallery-item">
                     <img src="computer_engineering.jpg" alt="Computer Engineering">
-                </div>
-                <div class="gallery-item">
                     <img src="ece_building.jpg" alt="ECE Building">
                 </div>
+                <button class="prev-btn" onclick="prevSlide()">&#10094;</button>
+                <button class="next-btn" onclick="nextSlide()">&#10095;</button>
             </div>
         </div>
     </section>
@@ -56,5 +54,6 @@
             </form>
         </div>
     </section>
+    <script src="script.js"></script>
 </body>
 </html>
