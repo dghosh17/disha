@@ -10,7 +10,7 @@ body {
 }
 
 body.fade-out {
-    opacity: 0; /* Fade-out effect */ 
+    opacity: 0; /* Fade-out effect */
 }
 
 header {
@@ -44,12 +44,13 @@ header nav ul li a {
     text-decoration: none;
     font-weight: 300;
     font-family: 'Spectral', serif;
-    transition: color 0.3s;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
 }
 
 header nav ul li a:hover {
     color: #f39c12;
-    text-decoration: underline;
+    border-bottom: 2px solid #f39c12;
 }
 
 header h1 {
@@ -68,21 +69,16 @@ header h1 {
     margin-bottom: 20px;
 }
 
-.introduction, .gallery {
-    flex: 1;
-    min-width: 300px;
-    margin: 20px;
-}
-
-.introduction .box,
-.gallery .box {
+.main-content .box {
     background-color: #fff4e9; /* light cream */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
-    max-width: 600px; /* Added max-width */
-    margin: 0 auto 20px; /* Center align the boxes */
+    max-width: 1200px; /* Set a max-width to prevent spreading to the edges */
+    margin: 0 auto 20px; /* Center align the box */
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .box:hover {
@@ -90,10 +86,19 @@ header h1 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.gallery, .introduction {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+}
+
+.gallery .slideshow-container, .introduction .text {
+    max-width: 100%;
+}
+
 .slideshow-container {
-    max-width: 600px;
+    max-width: 100%;
     position: relative;
-    margin: auto;
 }
 
 .mySlides {
@@ -160,25 +165,4 @@ button:hover {
 /* Apply 'Karla' font to all headers */
 h1, h2 {
     font-family: 'Karla', sans-serif;
-}
-
-/* Additional styles for project images */
-.project-image {
-    width: 100%;
-    max-width: 400px; /* Set a max-width to prevent large images */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px;
-    margin-top: 10px;
-}
-
-/* Contact Information at the Bottom */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #2c3e50; /* Navy background */
-    color: #fff;
-}
-
-footer p {
-    margin: 5px 0;
 }
