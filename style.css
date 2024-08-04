@@ -62,23 +62,22 @@ header h1 {
 
 .main-content {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 40px 20px;
     text-align: center;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
-.main-content .box {
+.box {
     background-color: #fff4e9; /* light cream */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
-    max-width: 1200px; /* Set a max-width to prevent spreading to the edges */
+    max-width: 600px; /* Restrict width */
+    width: 100%;
     margin: 0 auto 20px; /* Center align the box */
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .box:hover {
@@ -86,39 +85,26 @@ header h1 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.gallery, .introduction {
+.introduction, .gallery {
     flex: 1;
     min-width: 300px;
-    margin: 10px;
 }
 
-.gallery .slideshow-container, .introduction .text {
-    max-width: 100%;
+.gallery {
+    max-width: 50%;
+    margin-right: 20px; /* Space between gallery and introduction */
 }
 
-.slideshow-container {
-    max-width: 100%;
-    position: relative;
-}
-
-.mySlides {
-    display: none;
-    animation: fade-in 1s ease-in-out, zoom-in 1s ease-in-out;
-}
-
-.mySlides img {
+.gallery img {
     width: 100%;
-    border-radius: 10px;
+    height: auto;
+    max-width: 100%;
+    max-height: 300px; /* Limit height */
+    margin-bottom: 10px; /* Space between images */
 }
 
-@keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes zoom-in {
-    from { transform: scale(1.1); }
-    to { transform: scale(1); }
+.introduction {
+    max-width: 50%;
 }
 
 form {
@@ -127,6 +113,10 @@ form {
     max-width: 500px;
     width: 100%;
     margin: 0 auto; /* Center align the form */
+    background-color: #fff4e9; /* Light brown background for the form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 label {
