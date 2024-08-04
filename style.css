@@ -63,8 +63,8 @@ header h1 {
     margin-bottom: 20px;
 }
 
-.main-content .box, .contact.box {
-    background-color: #fff4e9; /* light cream */
+.main-content .box, .contact.box, .projects .project-box {
+    background-color: #fff4e9; /* unified light cream color */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -73,17 +73,14 @@ header h1 {
     margin: 0 auto 20px; /* Center align the box */
     display: flex;
     flex-wrap: wrap;
+    text-align: left; /* Align text to the left for better readability */
 }
 
 .contact.box {
-    background-color: #f7e4d4; /* Lighter brown color for contact box */
-    margin: 20px auto;
-    padding: 20px;
-    text-align: center;
     max-width: 500px; /* Limit width for the contact box */
 }
 
-.box:hover {
+.box:hover, .project-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -158,6 +155,11 @@ h1, h2 {
     font-family: 'Karla', sans-serif;
 }
 
-/* Styles for project box */
+/* Project image container and styling */
 .projects .project-box {
-    background
+    text-align: center;
+    max-width: 800px;
+}
+
+.project-image {
+    max-width: 100
