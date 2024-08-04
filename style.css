@@ -159,7 +159,12 @@ h1, h2 {
 .projects .project-box {
     text-align: center;
     max-width: 800px;
+    margin: 0 auto; /* Center align the project box */
 }
 
 .project-image {
-    max-width: 100
+    max-width: 50%; /* Set a smaller max-width for project images */
+    border-radius: 10px; /* Add rounded corners to images */
+    margin: 0 auto; /* Center align images */
+    display: block;
+}
