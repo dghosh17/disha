@@ -10,7 +10,7 @@ body {
 }
 
 body.fade-out {
-    opacity: 0; /* Fade-out effect */
+    opacity: 0; /* Fade-out effect */ 
 }
 
 header {
