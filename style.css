@@ -71,6 +71,8 @@ header h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     transition: transform 0.2s, box-shadow 0.2s;
+    max-width: 600px; /* Added max-width */
+    margin: 0 auto 20px; /* Center align the boxes */
 }
 
 .box:hover {
