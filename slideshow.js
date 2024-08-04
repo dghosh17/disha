@@ -1,27 +1,13 @@
-const slides = document.querySelectorAll('.slide');
-let index = 0;
+let slideIndex = 0;
+showSlides();
 
-function showSlide(n) {
-    slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === n) {
-            slide.classList.add('active');
-        }
-    });
+function showSlides() {
+    let slides = document.querySelectorAll(".mySlides");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
-
-function prevSlide() {
-    index = (index - 1 + slides.length) % slides.length;
-    showSlide(index);
-}
-
-function nextSlide() {
-    index = (index + 1) % slides.length;
-    showSlide(index);
-}
-
-document.querySelector('.prev').addEventListener('click', prevSlide);
-document.querySelector('.next').addEventListener('click', nextSlide);
-
-// Optional: Auto-slide functionality
-// setInterval(nextSlide, 3000);
