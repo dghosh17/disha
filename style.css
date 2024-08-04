@@ -59,25 +59,27 @@ header h1 {
     margin: 0;
 }
 
-.introduction, .gallery, .contact, .projects {
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: 40px 20px;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.introduction {
-    margin-top: 40px;
+.introduction, .gallery {
+    flex: 1;
+    min-width: 300px;
+    margin: 20px;
 }
 
 .introduction .box,
-.gallery .box,
-.contact .box,
-.projects .box {
+.gallery .box {
     background-color: #fff4e9; /* light cream */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
     transition: transform 0.2s, box-shadow 0.2s;
     max-width: 600px; /* Added max-width */
     margin: 0 auto 20px; /* Center align the boxes */
@@ -96,6 +98,7 @@ header h1 {
 
 .mySlides {
     display: none;
+    animation: fade-in 1s ease-in-out, zoom-in 1s ease-in-out;
 }
 
 .mySlides img {
@@ -103,11 +106,22 @@ header h1 {
     border-radius: 10px;
 }
 
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoom-in {
+    from { transform: scale(1.1); }
+    to { transform: scale(1); }
+}
+
 form {
     display: inline-block;
     text-align: left;
     max-width: 500px;
     width: 100%;
+    margin: 0 auto; /* Center align the form */
 }
 
 label {
