@@ -21,13 +21,13 @@
         <div class="box">
             <section class="gallery">
                 <div class="slideshow-container">
-                    <div class="mySlides fade">
+                    <div class="mySlides">
                         <img src="grainger_engineering.jpg" alt="Grainger Engineering">
                     </div>
-                    <div class="mySlides fade">
+                    <div class="mySlides">
                         <img src="computer_engineering.jpg" alt="Computer Engineering">
                     </div>
-                    <div class="mySlides fade">
+                    <div class="mySlides">
                         <img src="ece.jpg" alt="ECE Building">
                     </div>
                 </div>
@@ -40,38 +40,7 @@
             </section>
         </div>
     </div>
-    <section class="contact">
-        <div class="box">
-            <h2>Contact Me</h2>
-            <form action="https://formspree.io/f/xovadrgy" method="POST">
-                <label for="email">Your email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Your message:</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </section>
-    <script src="slideshow.js"></script>
-    <script>
-        // Page load fade-in effect
-        document.addEventListener("DOMContentLoaded", function() {
-            document.body.style.opacity = 1;
-        });
-
-        // Page navigation fade-out effect
-        document.querySelectorAll('a').forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                let target = this.href;
-                document.body.classList.add('fade-out');
-                setTimeout(function() {
-                    window.location.href = target;
-                }, 500);
-            });
-        });
-    </script>
-</body>
-</html>
+    <section class="contact box">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/xovadrgy" method="POST">
+            <label for=
