@@ -1,42 +1,27 @@
-let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+let index = 0;
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.carousel-slide img');
-    const totalSlides = slides.length;
-
-    if (index >= totalSlides) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = totalSlides - 1;
-    } else {
-        currentSlide = index;
-    }
-
-    const offset = -currentSlide * 100;
-    document.querySelector('.carousel-slide').style.transform = `translateX(${offset}%)`;
-
-    // Rotate arrows if needed
-    rotateArrows();
-}
-
-function nextSlide() {
-    showSlide(currentSlide + 1);
+function showSlide(n) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === n) {
+            slide.classList.add('active');
+        }
+    });
 }
 
 function prevSlide() {
-    showSlide(currentSlide - 1);
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
 }
 
-function rotateArrows() {
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-
-    prevBtn.style.transform = 'rotate(0deg)'; // Ensure the previous button is upright
-    nextBtn.style.transform = 'rotate(0deg)'; // Ensure the next button is upright
+function nextSlide() {
+    index = (index + 1) % slides.length;
+    showSlide(index);
 }
 
-// Initialize the carousel
-showSlide(currentSlide);
+document.querySelector('.prev').addEventListener('click', prevSlide);
+document.querySelector('.next').addEventListener('click', nextSlide);
 
-// Optional: Auto-slide functionality (remove if not needed)
+// Optional: Auto-slide functionality
 // setInterval(nextSlide, 3000);
