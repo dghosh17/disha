@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disha Ghosh's Website</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Futura:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&family=Libre+Franklin:wght@400;600&display=swap">
 </head>
 <body>
     <header>
@@ -26,21 +26,19 @@
     <section class="gallery">
         <div class="box">
             <h2>Gallery</h2>
-            <div class="carousel-container">
-                <div class="carousel-slide">
-                    <img src="grainger_engineering.jpg" alt="Grainger Engineering">
-                    <img src="computer_engineering.jpg" alt="Computer Engineering">
-                    <img src="ece_building.jpg" alt="ECE Building">
-                </div>
-                <button class="prev-btn" onclick="prevSlide()">&#10094;</button>
-                <button class="next-btn" onclick="nextSlide()">&#10095;</button>
+            <div id="slider">
+                <div class="slide active"><img src="grainger_engineering.jpg" alt="Grainger Engineering"></div>
+                <div class="slide"><img src="computer_engineering.jpg" alt="Computer Engineering"></div>
+                <div class="slide"><img src="ece_building.jpg" alt="ECE Building"></div>
             </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
         </div>
     </section>
     <section class="contact">
         <div class="box">
             <h2>Contact Me</h2>
-            <form action="mailto:disha4@illinois.edu" method="post" enctype="text/plain">
+            <form action="https://formspree.io/f/{your_form_id}" method="POST">
                 <label for="name">Name: </label>
                 <input type="text" id="name" name="name" required>
                 
@@ -54,6 +52,6 @@
             </form>
         </div>
     </section>
-    <script src="script.js"></script>
+    <script src="slideshow.js"></script>
 </body>
 </html>
