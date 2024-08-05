@@ -9,7 +9,7 @@ function showSlides() {
         slide.style.display = "none";
     });
     
-    // Increment slideIndex and loop back if necessary 
+    // Increment slideIndex and loop back if necessary
     slideIndex++;
     if (slideIndex > slides.length) { 
         slideIndex = 1;
