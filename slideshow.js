@@ -3,11 +3,19 @@ showSlides();
 
 function showSlides() {
     let slides = document.querySelectorAll(".mySlides");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
+    
+    // Remove 'active' class from all slides
+    slides.forEach(slide => {
+        slide.classList.remove("active");
+    });
+    
+    // Increment slideIndex and loop back if necessary
     slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    slides[slideIndex-1].style.display = "block";  
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    
+    // Add 'active' class to the current slide
+    slides[slideIndex - 1].classList.add("active");
+    
+    // Change slide every 3 seconds
+    setTimeout(showSlides, 3000);
 }
