@@ -106,13 +106,6 @@ header h1 {
     position: absolute;
     width: 100%;
     height: 100%;
-    transition: opacity 1s ease-in-out;
-    opacity: 0; /* Start with the slides being invisible */
-}
-
-.mySlides.active {
-    display: block;
-    opacity: 1; /* Fade in the active slide */
 }
 
 .mySlides img {
