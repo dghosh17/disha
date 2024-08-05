@@ -110,14 +110,14 @@ header h1 {
     opacity: 0; /* Start with the slides being invisible */
 }
 
-.mySlides img {
-    width: 100%;
-    border-radius: 10px;
-}
-
 .mySlides.active {
     display: block;
     opacity: 1; /* Fade in the active slide */
+}
+
+.mySlides img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 form {
