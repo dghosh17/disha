@@ -177,11 +177,24 @@ h1, h2 {
     margin: 20px auto; /* Add margin to space out the project boxes */
 }
 
+.projects .project-box h2 {
+    text-align: center;
+    width: 100%;
+}
+
 .project-image {
-    max-width: 50%; /* Set a smaller max-width for project images */
+    width: 100%; /* Ensure images take the full width of the container */
+    max-width: 600px; /* Limit the maximum width of images */
     border-radius: 10px; /* Add rounded corners to images */
-    margin: 0 auto; /* Center align images */
+    margin: 20px auto; /* Center align images */
     display: block;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Pop-out effect on hover */
+.project-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Add smooth scrolling */
