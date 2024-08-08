@@ -7,7 +7,7 @@ function showSlides() {
     slides.forEach(slide => {
         slide.style.display = "none";
         slide.classList.remove("fade");
-    });
+    }); 
 
     slideIndex++;
     if (slideIndex > slides.length) { 
