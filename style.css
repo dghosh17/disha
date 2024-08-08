@@ -101,13 +101,14 @@ header h1 {
     overflow: hidden;
 }
 
+/* Fade effect for the slideshow images */
 .mySlides {
     display: none;
     position: relative;
     width: 100%;
     height: auto;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out; /* Smooth fade transition */
 }
 
 .mySlides.fade {
@@ -182,19 +183,20 @@ h1, h2 {
     width: 100%;
 }
 
+/* Center images */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ensures images are vertically centered within their container */
+}
+
 .project-image {
-    width: 100%; /* Ensure images take the full width of the container */
+    width: 100%;
     max-width: 600px; /* Limit the maximum width of images */
     border-radius: 10px; /* Add rounded corners to images */
     margin: 20px auto; /* Center align images */
     display: block;
     transition: transform 0.3s, box-shadow 0.3s;
-}
-
-/* Center images */
-.image-container {
-    display: flex;
-    justify-content: center;
 }
 
 /* Pop-out effect on hover */
