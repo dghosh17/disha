@@ -21,13 +21,13 @@
         <div class="box">
             <section class="gallery">
                 <div class="slideshow-container">
-                    <div class="mySlides">
+                    <div class="mySlides fade">
                         <img src="grainger_engineering.jpg" alt="Grainger Engineering">
                     </div>
-                    <div class="mySlides">
+                    <div class="mySlides fade">
                         <img src="computer_engineering.jpg" alt="Computer Engineering">
                     </div>
-                    <div class="mySlides">
+                    <div class="mySlides fade">
                         <img src="ece.jpg" alt="ECE Building">
                     </div>
                 </div>
@@ -52,6 +52,27 @@
             <button type="submit">Send</button>
         </form>
     </section>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+    
     <script src="slideshow.js"></script>
+    <script>
+        // Back to Top Button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("back-to-top").style.display = "block";
+            } else {
+                document.getElementById("back-to-top").style.display = "none";
+            }
+        }
+        
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>
