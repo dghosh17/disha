@@ -191,6 +191,12 @@ h1, h2 {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Center images */
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
 /* Pop-out effect on hover */
 .project-image:hover {
     transform: scale(1.1);
