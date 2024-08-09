@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Disha Ghosh</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@700&family=Spectral:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+        <h1>About Me</h1>
+    </header>
+
+    <section class="greeting box">
+        <h2 id="greeting-message"></h2>
+        <p>Welcome to my personal space on the web! Scroll down to learn more about my journey and have some fun with a mini-game.</p>
+    </section>
+
+    <section class="timeline box">
+        <h2>My Journey</h2>
+        <div class="timeline-container">
+          
+        </div>
+    </section>
+
+    <section class="mini-game box">
+        <h2>Decorate a Cake</h2>
+        <p>Have fun decorating your own virtual cake!</p>
+        <div id="cake-game">
+            <!-- Mini-game code will go here -->
+        </div>
+    </section>
+
+    <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+
+    <script src="greeting.js"></script>
+    <script src="timeline.js"></script>
+    <script src="cakegame.js"></script>
+    <script src="scroll.js"></script>
+</body>
+</html>
