@@ -115,8 +115,9 @@ header h1 {
 }
 
 .mySlides img {
-    width: 100%;
-    border-radius: 10px;
+    width: 90%; /* Reduce from 100% to 90% */
+    max-width: 500px; /* Optional: Set a max-width if needed */
+    border-radius: 10px; /* Keep rounded corners */
 }
 
 /* Form styling */
@@ -197,8 +198,8 @@ h1, h2 {
 }
 
 .project-image {
-    width: 100%;
-    max-width: 600px; /* Limit the maximum width of images */
+    width: 80%;
+    max-width: 512px; /* Limit the maximum width of images */
     border-radius: 10px; /* Add rounded corners to images */
     margin: 20px 0; /* Center align images vertically with margin */
     display: block;
