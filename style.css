@@ -202,13 +202,7 @@ h1, h2 {
     border-radius: 10px; /* Add rounded corners to images */
     margin: 20px 0; /* Center align images vertically with margin */
     display: block;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-/* Pop-out effect on hover */
-.project-image:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Removed pop-out effect */
 }
 
 /* Add smooth scrolling */
