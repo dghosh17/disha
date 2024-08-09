@@ -64,18 +64,18 @@ header h1 {
 }
 
 .main-content .box, .contact.box, .projects .project-box {
-    background-color: #fff4e9; /* unified light cream color */
+    background-color: #fff4e9; /* light cream color */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
-    max-width: 1200px; /* Set a max-width to prevent spreading to the edges */
-    margin: 0 auto 20px; /* Center align the box */
-    text-align: center; /* Center align text for better readability */
+    max-width: 1200px; 
+    margin: 0 auto 20px; 
+    text-align: center; 
 }
 
 .contact.box {
-    max-width: 500px; /* Limit width for the contact box */
+    max-width: 500px;
 }
 
 .box:hover, .project-box:hover {
@@ -107,7 +107,7 @@ header h1 {
     width: 100%;
     height: auto;
     opacity: 0;
-    transition: opacity 1s ease-in-out; /* Smooth fade transition */
+    transition: opacity 1s ease-in-out;
 }
 
 .mySlides.fade {
@@ -115,18 +115,18 @@ header h1 {
 }
 
 .mySlides img {
-    width: 90%; /* Reduce from 100% to 90% */
-    max-width: 500px; /* Optional: Set a max-width if needed */
-    border-radius: 10px; /* Keep rounded corners */
+    width: 90%; 
+    max-width: 500px; 
+    border-radius: 10px; 
 }
 
-/* Form styling */
+/* Form Code */
 form {
     display: inline-block;
     text-align: left;
     max-width: 500px;
     width: 100%;
-    margin: 0 auto; /* Center align the form */
+    margin: 0 auto;
 }
 
 label {
@@ -162,24 +162,24 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Apply 'Karla' font to all headers */
+
 h1, h2 {
     font-family: 'Karla', sans-serif;
 }
 
-/* Project image container and styling */
+
 .projects {
     padding: 20px;
-    text-align: center; /* Center align text for the projects section */
+    text-align: center; 
 }
 
 .projects .project-box {
     text-align: center;
     max-width: 800px;
-    margin: 20px auto; /* Add margin to space out the project boxes */
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center everything within the box */
+    align-items: center;
     justify-content: center;
 }
 
@@ -188,30 +188,30 @@ h1, h2 {
     width: 100%;
 }
 
-/* Center images within their containers */
+
 .image-container {
     display: flex;
     justify-content: center;
-    align-items: center; /* Vertically center images */
+    align-items: center; 
     width: 100%;
     height: auto;
 }
 
 .project-image {
     width: 80%;
-    max-width: 512px; /* Limit the maximum width of images */
-    border-radius: 10px; /* Add rounded corners to images */
-    margin: 20px 0; /* Center align images vertically with margin */
+    max-width: 512px;
+    border-radius: 10px;
+    margin: 20px 0; 
     display: block;
-    /* Removed pop-out effect */
+
 }
 
-/* Add smooth scrolling */
+
 html {
     scroll-behavior: smooth;
 }
 
-/* Add a back-to-top button */
+
 #back-to-top {
     position: fixed;
     bottom: 20px;
