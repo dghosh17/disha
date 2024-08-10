@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <div class="toppings">
             <button onclick="addTopping('strawberry')">Add Strawberry</button>
             <button onclick="addTopping('chocolate')">Add Chocolate</button>
-            <button onclick="addTopping('cherry')">Add Cherry</button>
+            <button onclick="addTopping('pink')">Add Pink</button>
         </div>
         <div class="cake-toppings"></div>
     `;
