@@ -20,13 +20,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
         switch(topping) {
             case 'strawberry':
-                toppingElement.style.backgroundImage = "url('strawberry.png')"; // Replace with your strawberry PNG filename
+                toppingElement.style.backgroundImage = "url('cake-img/strawberry.png')";
                 break;
             case 'chocolate':
-                toppingElement.style.backgroundImage = "url('chocolate.png')"; // Replace with your chocolate PNG filename
+                toppingElement.style.backgroundImage = "url('cake-img/chocolate.png')";
                 break;
-            case 'cherry':
-                toppingElement.style.backgroundImage = "url('cherry.png')"; // Replace with your cherry PNG filename
+            case 'pink':
+                toppingElement.style.backgroundImage = "url('cake-img/pink.png')";
                 break;
         }
 
