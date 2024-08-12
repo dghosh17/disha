@@ -1,23 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const cakeGameContainer = document.getElementById('cake-game');
-
-    cakeGameContainer.innerHTML = `
-        <div class="cake-game-wrapper">
-            <div class="toppings">
-                <button onclick="createDraggableTopping('berries')">Berries</button>
-                <button onclick="createDraggableTopping('chocolate')">Chocolate</button>
-                <button onclick="createDraggableTopping('pink')">Pink</button>
-                <button onclick="createDraggableTopping('sprinkles')">Sprinkles</button>
-                <button onclick="createDraggableTopping('candle')">Candle</button>
-                <button onclick="resetCake()">Reset</button>
-            </div>
-            <div class="cake" id="cake-area">
-                <div class="cake-layer"></div>
-                <div class="cake-toppings"></div>
-            </div>
-        </div>
-    `;
-
+    // Function to create a draggable topping
     window.createDraggableTopping = function(topping) {
         const toppingElement = document.createElement('span');
         toppingElement.classList.add('topping');
@@ -47,16 +29,17 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         toppingElement.draggable = true;
-
         toppingElement.addEventListener('dragstart', dragStart);
         document.querySelector('.cake-toppings').appendChild(toppingElement);
     };
 
+    // Function to handle the drag start event
     function dragStart(event) {
         event.dataTransfer.setData("text/plain", event.target.dataset.topping);
     }
 
-    const cakeArea = document.getElementById('cake-area');
+    // Allow dropping toppings onto the cake area
+    const cakeArea = document.querySelector('.cake');
     cakeArea.addEventListener('dragover', function(event) {
         event.preventDefault();
     });
@@ -99,8 +82,9 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector('.cake-toppings').appendChild(toppingElement);
     });
 
+    // Function to reset the cake
     window.resetCake = function() {
         const cakeToppings = document.querySelector('.cake-toppings');
-        cakeToppings.innerHTML = '';
+        cakeToppings.innerHTML = ''; // Clear all toppings
     };
 });
