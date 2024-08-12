@@ -284,27 +284,24 @@ html {
     transform: rotate(360deg);
 }
 
-/* Updated Cake Game Styles */
+/* Cake Game Styles */
 .cake-game-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.toppings {
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 20px auto;
 }
 
 .cake {
     position: relative;
-    width: 200px;
-    height: 200px;
-    background: url('cake-img/cake.png') no-repeat center center;
-    background-size: contain;
-    border: 2px solid #2c3e50;
+    width: 500px;
+    height: 500px;
+}
+
+.cake-base {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
 
 .cake-toppings {
@@ -313,27 +310,28 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
+    z-index: 1;
 }
 
 .cake-toppings .topping {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    background-size: cover;
+    width: 500px;
+    height: 500px;
+    top: 0;
+    left: 0;
+    background-size: contain;
+}
+
+.toppings {
+    margin-top: 10px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    pointer-events: all;
+    gap: 10px;
 }
 
 .toppings button {
-    margin: 10px 0;
     padding: 10px;
-    background-color: #2c3e50;
+    background-color: #9d8189;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -342,6 +340,6 @@ html {
 }
 
 .toppings button:hover {
-    background-color: #34495e;
+    background-color: #b39198;
     transform: scale(1.05);
 }
