@@ -1,4 +1,3 @@
-// timeline.js
 document.addEventListener("DOMContentLoaded", function() {
     const timelineContainer = document.getElementById('timeline');
 
@@ -6,7 +5,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const timelineEvents = [
         { year: 2005, event: 'I was born' },
         { year: 2014, event: 'Started building video games' },
-        { year: 2020, event: 'Made my first video game' }
+        { year: 2020, event: 'Made my first video game' },
+        { year: 2021, event: 'Released my first commercial game' },
+        { year: 2022, event: 'Started working on a new project' },
+        { year: 2023, event: 'Gave a talk at a gaming conference' }
     ];
 
     // Dynamically create timeline events
