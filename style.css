@@ -8,18 +8,22 @@ body {
 }
 
 header {
-    background-color: #2c3e50; /* Navy background */
+    background-color: #9d8189; /* Updated from navy blue */
     color: #fff;
     padding: 20px;
-    text-align: center;
+    text-align: left; /* Align text to the left */
     position: relative;
 }
 
+/* Navigation Styling */
 header nav {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start (left) */
     position: absolute;
-    left: 20px;
     top: 50%;
     transform: translateY(-50%);
+    max-width: 250px; /* Limit the width of the navigation */
+    width: 100%;
 }
 
 header nav ul {
@@ -27,14 +31,15 @@ header nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    gap: 10px; /* Reduced gap between items */
 }
 
 header nav ul li {
-    margin: 0 15px;
+    margin: 0;
 }
 
 header nav ul li a {
-    color: #fff4e9; /* light cream */
+    color: #fff4e9; /* Light cream color */
     text-decoration: none;
     font-weight: 300;
     font-family: 'Spectral', serif;
@@ -50,7 +55,7 @@ header nav ul li a:hover {
 header h1 {
     font-size: 2.5em;
     font-family: 'Karla', sans-serif;
-    color: #fff4e9; /* light cream */
+    color: #fff4e9; /* Light cream */
     margin: 0;
 }
 
@@ -148,7 +153,7 @@ input, textarea {
 button {
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #2c3e50; /* Navy background */
+    background-color: #9d8189; /* Updated from navy blue */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -158,7 +163,7 @@ button {
 }
 
 button:hover {
-    background-color: #34495e;
+    background-color: #b39198;
     transform: scale(1.05);
 }
 
@@ -211,7 +216,7 @@ html {
     bottom: 20px;
     right: 20px;
     display: none;
-    background-color: #2c3e50; /* Navy background */
+    background-color: #9d8189; /* Updated from navy blue */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -223,7 +228,7 @@ html {
 }
 
 #back-to-top:hover {
-    background-color: #34495e;
+    background-color: #b39198;
     transform: scale(1.05);
 }
 
@@ -240,7 +245,7 @@ html {
     align-items: center;
     padding: 20px;
     margin-top: 20px;
-    border: 2px solid #2c3e50;
+    border: 2px solid #9d8189; /* Updated from navy blue */
     border-radius: 10px;
     height: 100px;
 }
@@ -252,7 +257,7 @@ html {
     left: 0;
     right: 0;
     height: 4px;
-    background-color: #2c3e50;
+    background-color: #9d8189; /* Updated from navy blue */
 }
 
 .timeline-event {
@@ -315,23 +320,22 @@ html {
 
 .cake-toppings .topping {
     position: absolute;
-    width: 500px;
-    height: 500px;
-    top: 0;
-    left: 0;
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
     background-size: contain;
 }
 
 .toppings {
-    margin-top: 10px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     gap: 10px;
+    position: relative;
+    z-index: 2;
 }
 
 .toppings button {
     padding: 10px;
-    background-color: #9d8189;
+    background-color: #9d8189; /* Updated from navy blue */
     color: #fff;
     border: none;
     border-radius: 5px;
