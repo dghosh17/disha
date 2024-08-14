@@ -8,22 +8,32 @@ document.addEventListener("DOMContentLoaded", function() {
         switch(topping) {
             case 'berries':
                 toppingElement.style.backgroundImage = "url('cake-img/berries.png')";
+                toppingElement.style.width = '50px'; // Adjust size as needed
+                toppingElement.style.height = '50px'; // Adjust size as needed
                 toppingElement.textContent = 'Berries';
                 break;
             case 'chocolate':
                 toppingElement.style.backgroundImage = "url('cake-img/chocolate.png')";
+                toppingElement.style.width = '50px'; // Adjust size as needed
+                toppingElement.style.height = '50px'; // Adjust size as needed
                 toppingElement.textContent = 'Chocolate';
                 break;
             case 'pink':
                 toppingElement.style.backgroundImage = "url('cake-img/pink.png')";
+                toppingElement.style.width = '50px'; // Adjust size as needed
+                toppingElement.style.height = '50px'; // Adjust size as needed
                 toppingElement.textContent = 'Pink';
                 break;
             case 'sprinkles':
                 toppingElement.style.backgroundImage = "url('cake-img/sprinkles.png')";
+                toppingElement.style.width = '50px'; // Adjust size as needed
+                toppingElement.style.height = '50px'; // Adjust size as needed
                 toppingElement.textContent = 'Sprinkles';
                 break;
             case 'candle':
                 toppingElement.style.backgroundImage = "url('cake-img/candle.png')";
+                toppingElement.style.width = '50px'; // Adjust size as needed
+                toppingElement.style.height = '50px'; // Adjust size as needed
                 toppingElement.textContent = 'Candle';
                 break;
         }
@@ -55,22 +65,32 @@ document.addEventListener("DOMContentLoaded", function() {
         switch(topping) {
             case 'berries':
                 toppingElement.style.backgroundImage = "url('cake-img/berries.png')";
+                toppingElement.style.width = '50px'; // Adjust size as needed
+                toppingElement.style.height = '50px'; // Adjust size as needed
                 toppingElement.textContent = 'Berries';
                 break;
             case 'chocolate':
                 toppingElement.style.backgroundImage = "url('cake-img/chocolate.png')";
+                toppingElement.style.width = '50px'; // Adjust size as needed
+                toppingElement.style.height = '50px'; // Adjust size as needed
                 toppingElement.textContent = 'Chocolate';
                 break;
             case 'pink':
                 toppingElement.style.backgroundImage = "url('cake-img/pink.png')";
+                toppingElement.style.width = '50px'; // Adjust size as needed
+                toppingElement.style.height = '50px'; // Adjust size as needed
                 toppingElement.textContent = 'Pink';
                 break;
             case 'sprinkles':
                 toppingElement.style.backgroundImage = "url('cake-img/sprinkles.png')";
+                toppingElement.style.width = '50px'; // Adjust size as needed
+                toppingElement.style.height = '50px'; // Adjust size as needed
                 toppingElement.textContent = 'Sprinkles';
                 break;
             case 'candle':
                 toppingElement.style.backgroundImage = "url('cake-img/candle.png')";
+                toppingElement.style.width = '50px'; // Adjust size as needed
+                toppingElement.style.height = '50px'; // Adjust size as needed
                 toppingElement.textContent = 'Candle';
                 break;
         }
