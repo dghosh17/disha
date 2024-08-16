@@ -2,13 +2,13 @@
 body {
     font-family: 'Spectral', serif;
     background-color: #e7d8c9; /* dark cream background */
-    color: #9d8189; /* Change text color from navy to purple */
+    color: #9d8189; /* replaced navy with 9d8189 */
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #9d8189; /* Change navy background to purple */
+    background-color: #9d8189; /* replaced navy with 9d8189 */
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -30,7 +30,7 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 15px;
+    margin: 0 10px; /* Adjusted the gap between nav items */
 }
 
 header nav ul li a {
@@ -54,27 +54,30 @@ header h1 {
     margin: 0;
 }
 
-/* General container styling */
-.main-content, .about-me-content, .projects .project-box {
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-content .box, .contact.box, .projects .project-box {
     background-color: #fff4e9; /* unified light cream color */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
     max-width: 1200px; /* Set a max-width to prevent spreading to the edges */
-    margin: 20px auto; /* Center align the box */
+    margin: 0 auto 20px; /* Center align the box */
     display: flex;
     flex-wrap: wrap;
     text-align: center; /* Center align text for better readability */
 }
 
-.about-me-content {
-    max-width: 1000px;
-    margin-top: 60px; /* Slightly lower top position */
-}
-
-.main-content .box, .projects .project-box {
-    max-width: 800px; /* Set max-width for content boxes */
+.contact.box {
+    max-width: 500px; /* Limit width for the contact box */
 }
 
 .box:hover, .project-box:hover {
@@ -88,11 +91,7 @@ header h1 {
     margin: 10px;
 }
 
-.gallery .slideshow-container, .introduction .text {
-    max-width: 100%;
-}
-
-.slideshow-container {
+.gallery .slideshow-container {
     max-width: 100%;
     position: relative;
     overflow: hidden;
@@ -116,112 +115,83 @@ header h1 {
     border-radius: 10px;
 }
 
-form {
-    display: inline-block;
-    text-align: left;
-    max-width: 500px;
-    width: 100%;
-    margin: 0 auto; /* Center align the form */
-}
-
-label {
-    display: block;
-    margin-top: 10px;
-    font-weight: 600;
-    font-family: 'Karla', sans-serif;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #9d8189; /* Change navy background to purple */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.2s, transform 0.2s;
-}
-
-button:hover {
-    background-color: #b39198; /* Adjust hover color for consistency */
-    transform: scale(1.05);
-}
-
-/* Apply 'Karla' font to all headers */
-h1, h2 {
-    font-family: 'Karla', sans-serif;
-}
-
-/* Cake Game Container Styling */
-.cake-game-container {
-    background-color: #fff4e9; /* light cream */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1200px; /* Set max-width for the container */
-    margin: 20px auto; /* Center align the container */
-    position: relative; /* Ensure it is positioned correctly */
-}
-
-/* Cake Game Button Styling */
-.cake-game-container button {
-    display: block;
-    margin: 10px auto;
-    padding: 5px 10px;
-    background-color: #9d8189; /* Change navy background to purple */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 12px; /* Smaller buttons */
-    font-weight: 600;
-    transition: background-color 0.2s, transform 0.2s;
-}
-
-.cake-game-container button:hover {
-    background-color: #b39198; /* Adjust hover color for consistency */
-    transform: scale(1.05);
-}
-
-/* Timeline Styling */
+/* About Me Page Styles */
 #timeline {
-    max-width: 1200px;
-    margin: 20px auto; /* Center align the timeline */
-    padding: 20px;
-    background-color: #fff4e9; /* light cream */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Set a max-width to prevent spreading to the edges */
+    margin: 0 auto; /* Center align the timeline */
 }
 
 .timeline-event {
-    background-color: #fff;
+    background-color: #fff4e9; /* light cream */
     padding: 10px;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.timeline-event h3 {
-    margin: 0;
-    color: #9d8189; /* Purple color for timeline years */
+#cake-container {
+    background-color: #fff4e9; /* light cream */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.timeline-event p {
-    margin: 5px 0;
-    color: #9d8189; /* Purple color for timeline events */
+#cake-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.timeline-event img {
-    max-width: 100%;
+#cake-buttons button {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: #9d8189;
+    color: #fff;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+    font-weight: 400;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#cake-buttons button:hover {
+    background-color: #8c6d6a;
+    transform: scale(1.05);
+}
+
+/* Projects Page */
+.projects .project-box {
+    background-color: #fff4e9; /* light cream */
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto; /* Center align the project boxes */
+}
+
+.project-image {
+    max-width: 100%; /* Set a smaller max-width for project images */
+    border-radius: 10px; /* Add rounded corners to images */
+    margin: 0 auto; /* Center align images */
+    display: block;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #9d8189; /* Color matching header */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#back-to-top:hover {
+    background-color: #8c6d6a;
+    transform: scale(1.05);
 }
