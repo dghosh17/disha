@@ -2,13 +2,13 @@
 body {
     font-family: 'Spectral', serif;
     background-color: #e7d8c9; /* dark cream background */
-    color: #2c3e50;
+    color: #9d8189; /* Change text color from navy to purple */
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #9d8189; /* Replace navy with #9d8189 */
+    background-color: #9d8189; /* Change navy background to purple */
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -30,7 +30,7 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 10px; /* Reduced gap between items */
+    margin: 0 15px;
 }
 
 header nav ul li a {
@@ -54,28 +54,27 @@ header h1 {
     margin: 0;
 }
 
-.main-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 40px 20px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.main-content .box, .contact.box, .projects .project-box {
-    background-color: #fff4e9; /* light cream color */
+/* General container styling */
+.main-content, .about-me-content, .projects .project-box {
+    background-color: #fff4e9; /* unified light cream color */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
-    max-width: 1200px; 
-    margin: 0 auto 20px; 
-    text-align: center; 
+    max-width: 1200px; /* Set a max-width to prevent spreading to the edges */
+    margin: 20px auto; /* Center align the box */
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center; /* Center align text for better readability */
 }
 
-.contact.box {
-    max-width: 500px;
+.about-me-content {
+    max-width: 1000px;
+    margin-top: 60px; /* Slightly lower top position */
+}
+
+.main-content .box, .projects .project-box {
+    max-width: 800px; /* Set max-width for content boxes */
 }
 
 .box:hover, .project-box:hover {
@@ -83,141 +82,146 @@ header h1 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Navigation Bar Image Limit */
-header nav ul li img {
-    max-width: 250px; /* Size limit for navigation bar images */
+.gallery, .introduction {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
 }
 
-/* Cake Game Styles */
-.cake-game-wrapper {
+.gallery .slideshow-container, .introduction .text {
+    max-width: 100%;
+}
+
+.slideshow-container {
+    max-width: 100%;
     position: relative;
-    width: 500px;
-    height: 500px;
-    margin: 20px auto;
+    overflow: hidden;
 }
 
-.cake {
-    position: relative;
-    width: 500px;
-    height: 500px;
-}
-
-.cake-base {
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-.cake-toppings {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.cake-toppings .topping {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    top: 0;
-    left: 0;
-    background-size: contain;
+.mySlides {
     display: none;
+    position: relative; /* Changed from absolute to relative */
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-.cake-toppings .topping.active {
+.mySlides.fade {
+    opacity: 1;
+}
+
+.mySlides img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto; /* Center align the form */
+}
+
+label {
     display: block;
-}
-
-.toppings {
     margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    position: absolute;
-    right: -100px; /* Position buttons to the right of the cake */
-    top: 0;
+    font-weight: 600;
+    font-family: 'Karla', sans-serif;
 }
 
-.toppings button {
-    padding: 5px 10px; /* Smaller buttons */
-    background-color: #9d8189;
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #9d8189; /* Change navy background to purple */
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: 600;
     transition: background-color 0.2s, transform 0.2s;
-    font-size: 12px;
 }
 
-.toppings button:hover {
-    background-color: #b39198;
+button:hover {
+    background-color: #b39198; /* Adjust hover color for consistency */
     transform: scale(1.05);
 }
 
+/* Apply 'Karla' font to all headers */
 h1, h2 {
     font-family: 'Karla', sans-serif;
 }
 
-/* Container styles for About Me Page */
-.greeting, .timeline, .mini-game {
-    background-color: #fff4e9; /* light cream color */
+/* Cake Game Container Styling */
+.cake-game-container {
+    background-color: #fff4e9; /* light cream */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-    max-width: 1200px; 
-    margin: 0 auto 20px; 
-    text-align: center;
+    max-width: 1200px; /* Set max-width for the container */
+    margin: 20px auto; /* Center align the container */
+    position: relative; /* Ensure it is positioned correctly */
 }
 
-/* Adjusting Container Alignment */
-.greeting {
-    text-align: center;
-    max-width: 800px;
-}
-
-/* Image Container Styles */
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-}
-
-.project-image {
-    width: 80%;
-    max-width: 512px;
-    border-radius: 10px;
-    margin: 20px 0;
+/* Cake Game Button Styling */
+.cake-game-container button {
     display: block;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-#back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;
-    background-color: #9d8189; /* Replace navy with #9d8189 */
+    margin: 10px auto;
+    padding: 5px 10px;
+    background-color: #9d8189; /* Change navy background to purple */
     color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 10px 15px;
     cursor: pointer;
-    font-size: 14px;
-    z-index: 1000;
+    font-size: 12px; /* Smaller buttons */
+    font-weight: 600;
     transition: background-color 0.2s, transform 0.2s;
 }
 
-#back-to-top:hover {
-    background-color: #b39198;
+.cake-game-container button:hover {
+    background-color: #b39198; /* Adjust hover color for consistency */
     transform: scale(1.05);
+}
+
+/* Timeline Styling */
+#timeline {
+    max-width: 1200px;
+    margin: 20px auto; /* Center align the timeline */
+    padding: 20px;
+    background-color: #fff4e9; /* light cream */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-event {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-event h3 {
+    margin: 0;
+    color: #9d8189; /* Purple color for timeline years */
+}
+
+.timeline-event p {
+    margin: 5px 0;
+    color: #9d8189; /* Purple color for timeline events */
+}
+
+.timeline-event img {
+    max-width: 100%;
+    border-radius: 5px;
 }
