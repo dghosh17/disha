@@ -37,20 +37,22 @@
 <section class="mini-game box">
     <h2>Decorate a Cake</h2>
     <p>Have fun decorating your own virtual cake!</p>
-    <div id="cake-game">
-        <div class="cake-game-wrapper">
-            <div class="cake">
-                <img src="cake-img/cake.png" alt="Cake Base" class="cake-base">
-                <div class="cake-toppings"></div>
-                <div class="toppings">
-                    <button onclick="addTopping('berries')">Berries</button>
-                    <button onclick="addTopping('chocolate')">Chocolate</button>
-                    <button onclick="addTopping('pink')">Pink</button>
-                    <button onclick="addTopping('sprinkles')">Sprinkles</button>
-                    <button onclick="addTopping('candle')">Candle</button>
-                    <button onclick="resetCake()">Reset</button>
-                </div>
-            </div>
+    <div id="cake-game" class="cake-game-wrapper">
+        <div class="cake">
+            <img src="cake-img/cake.png" alt="Cake Base" class="cake-base">
+            <img src="cake-img/berries.png" alt="Berries" class="topping berries" style="display: none;">
+            <img src="cake-img/chocolate.png" alt="Chocolate" class="topping chocolate" style="display: none;">
+            <img src="cake-img/pink.png" alt="Pink" class="topping pink" style="display: none;">
+            <img src="cake-img/sprinkles.png" alt="Sprinkles" class="topping sprinkles" style="display: none;">
+            <img src="cake-img/candle.png" alt="Candle" class="topping candle" style="display: none;">
+        </div>
+        <div class="toppings">
+            <button onclick="showTopping('berries')">Berries</button>
+            <button onclick="showTopping('chocolate')">Chocolate</button>
+            <button onclick="showTopping('pink')">Pink</button>
+            <button onclick="showTopping('sprinkles')">Sprinkles</button>
+            <button onclick="showTopping('candle')">Candle</button>
+            <button onclick="resetCake()">Reset</button>
         </div>
     </div>
 </section>
