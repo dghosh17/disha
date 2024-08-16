@@ -2,50 +2,39 @@
 body {
     font-family: 'Spectral', serif;
     background-color: #e7d8c9; /* dark cream background */
-    color: #9d8189; /* replaced navy with 9d8189 */
+    color: #9d8189; /* text color */
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #9d8189; /* replaced navy with 9d8189 */
-    color: #fff;
-    padding: 20px;
+    background-color: #f0eae0; /* Light cream background */
+    padding: 10px 0;
     text-align: center;
     position: relative;
 }
 
-header nav {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding: 15px; /* Increase padding to make the nav bar thicker */
-}
-
-header nav ul {
+nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    gap: 20px; /* Space between icons */
 }
 
-header nav ul li {
-    margin: 0 15px; /* Increased the gap between nav items */
+nav ul li {
+    display: inline;
 }
 
-header nav ul li a {
-    color: #fff4e9; /* light cream */
+nav ul li a {
+    display: inline-block;
     text-decoration: none;
-    font-weight: 300;
-    font-family: 'Spectral', serif;
-    transition: color 0.3s, border-bottom 0.3s;
-    border-bottom: 2px solid transparent;
 }
 
-header nav ul li a:hover {
-    color: #f39c12;
-    border-bottom: 2px solid #f39c12;
+nav ul li img {
+    width: 40px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
 }
 
 header h1 {
@@ -81,49 +70,25 @@ header h1 {
     max-width: 500px; /* Limit width for the contact box */
 }
 
-/* Center align headers for Projects page */
-.projects h1, .projects h2 {
+/* Center align text for specific elements */
+.contact.box h2, .projects .project-box h3 {
     text-align: center;
+    margin: 0;
 }
 
-/* Center align headers for Contact Me box */
-.contact h2 {
+/* Center align text for project titles */
+.projects .project-box {
+    background-color: #fff4e9; /* light cream */
     text-align: center;
+    max-width: 800px;
+    margin: 20px auto; /* Center align the project boxes */
 }
 
-.box:hover, .project-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.gallery, .introduction {
-    flex: 1;
-    min-width: 300px;
-    margin: 10px;
-}
-
-.gallery .slideshow-container {
-    max-width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.mySlides {
-    display: none;
-    position: relative; /* Changed from absolute to relative */
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.mySlides.fade {
-    opacity: 1;
-}
-
-.mySlides img {
-    width: 100%;
-    border-radius: 10px;
+.project-image {
+    max-width: 50%; /* Set to half the current size */
+    border-radius: 10px; /* Add rounded corners to images */
+    margin: 0 auto; /* Center align images */
+    display: block;
 }
 
 /* About Me Page Styles */
@@ -145,19 +110,27 @@ header h1 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#cake {
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
 }
 
 #cake-buttons {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 #cake-buttons button {
-    margin-bottom: 10px;
-    padding: 5px 10px;
+    padding: 10px 20px;
     background-color: #9d8189;
     color: #fff;
     border: none;
@@ -170,21 +143,6 @@ header h1 {
 #cake-buttons button:hover {
     background-color: #8c6d6a;
     transform: scale(1.05);
-}
-
-/* Projects Page */
-.projects .project-box {
-    background-color: #fff4e9; /* light cream */
-    text-align: center;
-    max-width: 800px;
-    margin: 20px auto; /* Center align the project boxes */
-}
-
-.project-image {
-    max-width: 50%; /* Set a smaller max-width for project images */
-    border-radius: 10px; /* Add rounded corners to images */
-    margin: 0 auto; /* Center align images */
-    display: block;
 }
 
 /* Back to Top Button */
