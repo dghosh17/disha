@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     timelineEvents.forEach(event => {
         const eventElement = document.createElement('div');
         eventElement.classList.add('timeline-event');
-        eventElement.innerHTML = `<h3>${event.year}</h3><p>${event.event}</p><img src="images/${event.year}.jpg" alt="Event for ${event.year}">`;
+        eventElement.innerHTML = `<h3>${event.year}</h3><p>${event.event}</p><img src="images/${event.year}.png" alt="Event for ${event.year}">`;
         timelineContainer.appendChild(eventElement);
     });
 });
