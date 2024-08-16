@@ -8,33 +8,43 @@ body {
 }
 
 header {
-    background-color: #f0eae0; /* Light cream background */
-    padding: 10px 0;
+    background-color: #9d8189; /* header color */
+    color: #fff;
+    padding: 20px;
     text-align: center;
     position: relative;
 }
 
-nav ul {
+header nav {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: flex-start; /* Align items to the left */
-    gap: 20px; /* Space between icons */
 }
 
-nav ul li {
-    display: inline;
+header nav ul li {
+    margin: 0 10px;
 }
 
-nav ul li a {
-    display: inline-block;
+header nav ul li a {
+    color: #fff4e9; /* light cream */
     text-decoration: none;
+    font-weight: 300;
+    font-family: 'Spectral', serif;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
 }
 
-nav ul li img {
-    width: 40px; /* Adjust as needed */
-    height: 40px; /* Adjust as needed */
+header nav ul li a:hover {
+    color: #f39c12;
+    border-bottom: 2px solid #f39c12;
 }
 
 header h1 {
@@ -44,6 +54,7 @@ header h1 {
     margin: 0;
 }
 
+/* Main Content */
 .main-content {
     display: flex;
     flex-wrap: wrap;
@@ -53,56 +64,25 @@ header h1 {
     margin-bottom: 20px;
 }
 
-.main-content .box, .contact.box, .projects .project-box {
-    background-color: #fff4e9; /* unified light cream color */
+/* General Box Styles */
+.box {
+    background-color: #fff4e9; /* light cream */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-    max-width: 1200px; /* Set a max-width to prevent spreading to the edges */
-    margin: 0 auto 20px; /* Center align the box */
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center; /* Center align text for better readability */
+    margin: 20px auto; /* Center align the box with margin */
+    max-width: 1200px; /* Prevent box from touching edges */
 }
 
+/* Specific Box Styles */
 .contact.box {
     max-width: 500px; /* Limit width for the contact box */
+    text-align: center; /* Center text inside the box */
 }
 
-/* Center align text for specific elements */
-.contact.box h2, .projects .project-box h3 {
-    text-align: center;
-    margin: 0;
-}
-
-/* Center align text for project titles */
 .projects .project-box {
-    background-color: #fff4e9; /* light cream */
-    text-align: center;
-    max-width: 800px;
-    margin: 20px auto; /* Center align the project boxes */
-}
-
-.project-image {
-    max-width: 50%; /* Set to half the current size */
-    border-radius: 10px; /* Add rounded corners to images */
-    margin: 0 auto; /* Center align images */
-    display: block;
-}
-
-/* About Me Page Styles */
-#timeline {
-    max-width: 1200px; /* Set a max-width to prevent spreading to the edges */
-    margin: 0 auto; /* Center align the timeline */
-}
-
-.timeline-event {
-    background-color: #fff4e9; /* light cream */
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px;
+    text-align: center; /* Center text inside the project box */
+    max-width: 800px; /* Set a max-width for project boxes */
 }
 
 #cake-container {
@@ -110,7 +90,7 @@ header h1 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    max-width: 600px; /* Set a max-width to prevent touching edges */
     margin: 20px auto;
     text-align: center;
 }
@@ -143,6 +123,38 @@ header h1 {
 #cake-buttons button:hover {
     background-color: #8c6d6a;
     transform: scale(1.05);
+}
+
+/* About Me Page Styles */
+#timeline {
+    max-width: 1200px; /* Set a max-width to prevent touching edges */
+    margin: 0 auto; /* Center align the timeline */
+}
+
+.timeline-event {
+    background-color: #fff4e9; /* light cream */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+.top-text-box {
+    background-color: #fff4e9; /* light cream */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Adjust max-width to keep it centered */
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Projects Page */
+.projects .project-box {
+    background-color: #fff4e9; /* light cream */
+    text-align: center;
+    max-width: 800px; /* Set a max-width for project boxes */
+    margin: 20px auto; /* Center align the project boxes */
 }
 
 /* Back to Top Button */
