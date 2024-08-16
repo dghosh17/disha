@@ -64,6 +64,13 @@ header h1 {
     margin-bottom: 20px;
 }
 
+.home-page img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+}
+
 /* General Box Styles */
 .box {
     background-color: #fff4e9; /* light cream */
@@ -83,8 +90,17 @@ header h1 {
 .projects .project-box {
     text-align: center; /* Center text inside the project box */
     max-width: 800px; /* Set a max-width for project boxes */
+    margin: 20px auto; /* Center align the project boxes */
 }
 
+.projects img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* Cake Game Styles */
 #cake-container {
     background-color: #fff4e9; /* light cream */
     padding: 20px;
@@ -99,6 +115,7 @@ header h1 {
     width: 500px;
     height: 500px;
     border-radius: 10px;
+    object-fit: cover; /* Ensure the cake fits within its container */
 }
 
 #cake-buttons {
@@ -155,6 +172,13 @@ header h1 {
     text-align: center;
     max-width: 800px; /* Set a max-width for project boxes */
     margin: 20px auto; /* Center align the project boxes */
+}
+
+.projects img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 /* Back to Top Button */
