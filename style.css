@@ -2,13 +2,13 @@
 body {
     font-family: 'Spectral', serif;
     background-color: #e7d8c9; /* dark cream background */
-    color: #f8f5f2; /* light cream */
+    color: #2c3e50;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #9d8189; /* Updated color */
+    background-color: #9d8189; /* Replace navy with #9d8189 */
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -20,8 +20,6 @@ header nav {
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 250px;
-    text-align: left;
 }
 
 header nav ul {
@@ -29,15 +27,14 @@ header nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column;
 }
 
 header nav ul li {
-    margin: 5px 0; /* Reduced gap between items */
+    margin: 0 10px; /* Reduced gap between items */
 }
 
 header nav ul li a {
-    color: #f8f5f2; /* Updated color */
+    color: #fff4e9; /* light cream */
     text-decoration: none;
     font-weight: 300;
     font-family: 'Spectral', serif;
@@ -53,14 +50,14 @@ header nav ul li a:hover {
 header h1 {
     font-size: 2.5em;
     font-family: 'Karla', sans-serif;
-    color: #f8f5f2; /* Updated color */
+    color: #fff4e9; /* light cream */
     margin: 0;
 }
 
 .main-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centered content */
+    justify-content: space-around;
     padding: 40px 20px;
     text-align: center;
     margin-bottom: 20px;
@@ -74,8 +71,7 @@ header h1 {
     transition: transform 0.2s, box-shadow 0.2s;
     max-width: 1200px; 
     margin: 0 auto 20px; 
-    text-align: center;
-    max-width: 80%; /* Ensures the box doesn't reach edges */
+    text-align: center; 
 }
 
 .contact.box {
@@ -87,142 +83,9 @@ header h1 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-button {
-    padding: 5px 10px; /* Made the buttons smaller */
-    background-color: #9d8189;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.2s, transform 0.2s;
-}
-
-button:hover {
-    background-color: #b39198;
-    transform: scale(1.05);
-}
-
-h1, h2 {
-    font-family: 'Karla', sans-serif;
-}
-
-.projects {
-    padding: 20px;
-    text-align: center;
-}
-
-.projects .project-box {
-    text-align: center;
-    max-width: 800px;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.projects .project-box h2 {
-    text-align: center;
-    width: 100%;
-}
-
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-}
-
-.project-image {
-    width: 80%;
-    max-width: 512px;
-    border-radius: 10px;
-    margin: 20px 0;
-    display: block;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-#back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;
-    background-color: #9d8189; /* Updated color */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 14px;
-    z-index: 1000;
-    transition: background-color 0.2s, transform 0.2s;
-}
-
-#back-to-top:hover {
-    background-color: #b39198;
-    transform: scale(1.05);
-}
-
-/* Styles for the About Me page */
-.greeting {
-    text-align: center;
-}
-
-/* Timeline Number Line Styles */
-.timeline-container {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    margin-top: 20px;
-    border: 2px solid #9d8189; /* Updated color */
-    border-radius: 10px;
-    height: 100px;
-}
-
-.timeline-container::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background-color: #9d8189; /* Updated color */
-}
-
-.timeline-event {
-    position: relative;
-    text-align: center;
-    z-index: 1;
-}
-
-.timeline-event h3 {
-    margin: 0;
-    font-size: 14px;
-    transform: translateY(-30px);
-}
-
-.timeline-event p {
-    margin: 5px 0 0;
-    font-size: 12px;
-    transform: translateY(-20px);
-}
-
-.timeline-event img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    transition: transform 0.5s;
-}
-
-.timeline-event img:hover {
-    transform: rotate(360deg);
+/* Navigation Bar Image Limit */
+header nav ul li img {
+    max-width: 250px; /* Size limit for navigation bar images */
 }
 
 /* Cake Game Styles */
@@ -261,26 +124,100 @@ html {
     top: 0;
     left: 0;
     background-size: contain;
+    display: none;
+}
+
+.cake-toppings .topping.active {
+    display: block;
 }
 
 .toppings {
     margin-top: 10px;
     display: flex;
-    justify-content: flex-start; /* Align buttons to the left */
-    gap: 5px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    right: -100px; /* Position buttons to the right of the cake */
+    top: 0;
 }
 
 .toppings button {
-    padding: 5px 10px; /* Made the buttons smaller */
+    padding: 5px 10px; /* Smaller buttons */
     background-color: #9d8189;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s, transform 0.2s;
+    font-size: 12px;
 }
 
 .toppings button:hover {
+    background-color: #b39198;
+    transform: scale(1.05);
+}
+
+h1, h2 {
+    font-family: 'Karla', sans-serif;
+}
+
+/* Container styles for About Me Page */
+.greeting, .timeline, .mini-game {
+    background-color: #fff4e9; /* light cream color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    max-width: 1200px; 
+    margin: 0 auto 20px; 
+    text-align: center;
+}
+
+/* Adjusting Container Alignment */
+.greeting {
+    text-align: center;
+    max-width: 800px;
+}
+
+/* Image Container Styles */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.project-image {
+    width: 80%;
+    max-width: 512px;
+    border-radius: 10px;
+    margin: 20px 0;
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #9d8189; /* Replace navy with #9d8189 */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 1000;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#back-to-top:hover {
     background-color: #b39198;
     transform: scale(1.05);
 }
