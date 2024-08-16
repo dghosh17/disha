@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Define the events in your timeline
     const timelineEvents = [
-        { year: 2005, event: 'I was born' },
-        { year: 2014, event: 'Started building video games' },
-        { year: 2020, event: 'Made my first video game' },
-        { year: 2021, event: 'Released my first commercial game' },
-        { year: 2022, event: 'Started working on a new project' },
-        { year: 2023, event: 'Gave a talk at a gaming conference' }
+        { year: 2005, event: 'Welcomed into the world!' },
+        { year: 2014, event: 'Began to explore my passion for coding, diving into video game development across various platforms.' },
+        { year: 2020, event: 'Created my first solo video game using Maya and Unity, and enrolled in online coding courses at my local community college to deepen my knowledge.' },
+        { year: 2022, event: 'Joined CosmoCoding as a student teacher, mentoring younger students and sharing my love for coding.' },
+        { year: 2023, event: 'Started interning in the ASPIRE biotechnology program, where I discovered the interdisciplinary nature of computing and its broad applications.' },
+        { year: 2024, event: 'As a freshman at the University of Illinois, I joined various clubs, participated in my first hackathon, and continued my teaching journey as a course assistant in CS124.' }
     ];
 
     // Dynamically create timeline events
