@@ -94,7 +94,7 @@ header h1 {
 }
 
 .projects img {
-    max-width: 100%; /* Ensure images stay within project boxes */
+    max-width: 80%; /* Ensure images stay within project boxes */
     height: auto;
     border-radius: 10px;
     margin-bottom: 15px; /* Add space between the image and text */
@@ -112,7 +112,7 @@ header h1 {
 }
 
 .contact input, .contact textarea {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
