@@ -94,11 +94,13 @@ header h1 {
 }
 
 .projects img {
-    max-width: 80%; /* Ensure images stay within project boxes */
+    max-width: 80%; /* Reduce size for project images */
     height: auto;
+    max-height: 300px; /* Limit image height */
     border-radius: 10px;
-    margin-bottom: 15px; /* Add space between the image and text */
+    margin-bottom: 15px;
 }
+
 
 .project-box:hover {
     transform: translateY(-10px);
