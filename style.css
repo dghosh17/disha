@@ -133,27 +133,101 @@ header h1 {
     transform: scale(1.05);
 }
 
-/* Timeline styles: Years bigger, description underneath */
-.timeline-container .timeline-event {
+/* Timeline Section Styles */
+.timeline {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.timeline h2 {
+    text-align: center;
+    color: #9d8189; /* Muted pink */
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.timeline-event {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
-    margin-bottom: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff4e9; /* Light cream */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.timeline-container .timeline-event h3 {
-    font-size: 1.8em; /* Bigger font for years */
+.timeline-event:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-event::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #9d8189; /* Muted pink */
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline-event .year {
+    font-size: 2.5em;
+    color: #fff4e9; /* Light cream */
+    background-color: #9d8189; /* Muted pink */
+    padding: 10px 20px;
+    border-radius: 10px;
     font-weight: bold;
-    color: #9d8189;
-    margin-bottom: 5px;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    min-width: 120px;
+    text-align: center;
 }
 
-.timeline-container .timeline-event p {
-    font-size: 1.2em; /* Slightly larger text for descriptions */
-    margin-left: 10px; /* Indent the description */
-    margin-top: 0;
-    color: #666; /* Lighter text color for description */
+.timeline-event .description {
+    flex-grow: 1;
+    font-size: 1.2em;
+    color: #333; /* Darker text for readability */
+}
+
+.timeline-event:nth-child(odd) .description {
+    text-align: left;
+}
+
+.timeline-event:nth-child(even) .description {
+    text-align: right;
+}
+
+/* Lines between events */
+.timeline-line {
+    position: relative;
+    margin: 0 auto;
+    width: 2px;
+    height: 100%;
+    background-color: #9d8189; /* Muted pink */
+}
+
+.timeline-container {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.timeline-event img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Slideshow styles (Home Page) */
