@@ -21,39 +21,20 @@
 
     <section class="greeting box">
         <h2 id="greeting-message"></h2>
-        <p>Scroll down to discover more about me and have some fun with a mini-game along the way.</p>
+        <p>Scroll down to discover more about me.</p>
     </section>
 
-    <!-- Timeline Section -->
+
     <section class="timeline box">
         <h2>My Journey</h2>
         <div id="timeline" class="timeline-container">
-            <!-- Timeline events will be dynamically populated here -->
-        </div>
-    </section>
-
-    <!-- Cake Game Section -->
-    <section class="mini-game box">
-        <h2>Decorate a Cake</h2>
-        <p>
-            During quarantine, I tried out a bunch of new hobbies like hiking, drawing, painting, and even biking. But baking quickly became my favorite! Even if they didn’t always taste perfect, I loved decorating the cakes. Now it’s your turn! Come decorate this cake with me by clicking the buttons to add your favorite toppings.
-        </p>
-        <div id="cake-game" class="cake-game-wrapper">
-            <div class="cake">
-                <img src="cake-img/cake.png" alt="Cake Base" class="cake-base">
-                <img src="cake-img/berries.png" alt="Berries" class="topping berries" style="display: none;">
-                <img src="cake-img/chocolate.png" alt="Chocolate" class="topping chocolate" style="display: none;">
-                <img src="cake-img/pink.png" alt="Pink" class="topping pink" style="display: none;">
-                <img src="cake-img/sprinkles.png" alt="Sprinkles" class="topping sprinkles" style="display: none;">
-                <img src="cake-img/candle.png" alt="Candle" class="topping candle" style="display: none;">
-            </div>
-            <div class="toppings" id="cake-buttons">
-                <button onclick="showTopping('berries')">Berries</button>
-                <button onclick="showTopping('chocolate')">Chocolate</button>
-                <button onclick="showTopping('pink')">Pink</button>
-                <button onclick="showTopping('sprinkles')">Sprinkles</button>
-                <button onclick="showTopping('candle')">Candle</button>
-                <button onclick="resetCake()">Reset</button>
+      
+            <div class="timeline-event">
+                <div class="timeline-text">
+                    <h3>Started College</h3>
+                    <p>Joined UIUC to study Computer Engineering.</p>
+                </div>
+                <img src="images/college.jpg" alt="College Image">
             </div>
         </div>
     </section>
@@ -62,7 +43,6 @@
 
     <script src="greeting.js"></script>
     <script src="timeline.js"></script>
-    <script src="cakegame.js"></script>
     <script src="scroll.js"></script>
 </body>
 </html>
