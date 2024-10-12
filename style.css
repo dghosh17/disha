@@ -1,4 +1,4 @@
- /* General styles */
+/* General styles */
 body {
     font-family: 'Spectral', serif;
     background-color: #e7d8c9; /* dark cream background */
@@ -15,11 +15,36 @@ header {
     position: relative;
 }
 
+header nav {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 header nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff4e9; /* light cream */
+    text-decoration: none;
+    font-weight: 300;
+    font-family: 'Spectral', serif;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+header nav ul li a:hover {
+    color: #f39c12;
+    border-bottom: 2px solid #f39c12;
 }
 
 header h1 {
@@ -39,30 +64,11 @@ header h1 {
     margin-bottom: 20px;
 }
 
-/* Slideshow container */
-.slideshow-container img {
-    max-width: 600px;
-    max-height: 400px;
-    object-fit: cover;
+.home-page img {
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
-}
-
-/* Timeline Styles */
-.timeline-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.timeline-event {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.timeline-event img {
-    max-width: 200px;
-    margin-left: 20px;
+    margin: 10px;
 }
 
 /* General Box Styles */
@@ -71,19 +77,91 @@ header h1 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 1200px;
+    margin: 20px auto; /* Center align the box with margin */
+    max-width: 1200px; /* Prevent box from touching edges */
 }
 
-.box:hover, button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: all 0.2s ease;
+/* Project Box Styles */
+.projects .project-box {
+    background-color: #fff4e9; /* light cream */
+    text-align: center;
+    max-width: 800px; /* Set a max-width for project boxes */
+    margin: 20px auto; /* Center align the project boxes */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.box:active, button:active {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.projects img {
+    max-width: 100%; /* Ensure images stay within project boxes */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px; /* Add space between the image and text */
+}
+
+.project-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Lift up effect */
+}
+
+/* Contact Form Styles */
+.contact.box {
+    max-width: 500px; /* Limit width for the contact box */
+    text-align: center; /* Center text inside the box */
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #9d8189;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact button:hover {
+    background-color: #8c6d6a;
+    transform: scale(1.05);
+}
+
+/* Timeline styles: Years bigger, description underneath */
+.timeline-container .timeline-event {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.timeline-container .timeline-event h3 {
+    font-size: 1.8em; /* Bigger font for years */
+    font-weight: bold;
+    color: #9d8189;
+    margin-bottom: 5px;
+}
+
+.timeline-container .timeline-event p {
+    font-size: 1.2em; /* Slightly larger text for descriptions */
+    margin-left: 10px; /* Indent the description */
+    margin-top: 0;
+    color: #666; /* Lighter text color for description */
+}
+
+/* Slideshow styles (Home Page) */
+.slideshow-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-height: 400px; /* Limit height to ensure images are uniform */
 }
 
 /* Back to Top Button */
@@ -91,7 +169,7 @@ header h1 {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #9d8189;
+    background-color: #9d8189; /* Color matching header */
     color: #fff;
     padding: 10px 20px;
     border: none;
