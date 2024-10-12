@@ -15,36 +15,11 @@ header {
     position: relative;
 }
 
-header nav {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
 header nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
-}
-
-header nav ul li {
-    margin: 0 10px;
-}
-
-header nav ul li a {
-    color: #fff4e9; /* light cream */
-    text-decoration: none;
-    font-weight: 300;
-    font-family: 'Spectral', serif;
-    transition: color 0.3s, border-bottom 0.3s;
-    border-bottom: 2px solid transparent;
-}
-
-header nav ul li a:hover {
-    color: #f39c12;
-    border-bottom: 2px solid #f39c12;
 }
 
 header h1 {
@@ -64,11 +39,30 @@ header h1 {
     margin-bottom: 20px;
 }
 
-.home-page img {
-    max-width: 100%;
-    height: auto;
+/* Slideshow container */
+.slideshow-container img {
+    max-width: 600px;
+    max-height: 400px;
+    object-fit: cover;
     border-radius: 10px;
-    margin: 10px;
+}
+
+/* Timeline Styles */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-event {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.timeline-event img {
+    max-width: 200px;
+    margin-left: 20px;
 }
 
 /* General Box Styles */
@@ -77,108 +71,19 @@ header h1 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto; /* Center align the box with margin */
-    max-width: 1200px; /* Prevent box from touching edges */
-}
-
-/* Specific Box Styles */
-.contact.box {
-    max-width: 500px; /* Limit width for the contact box */
-    text-align: center; /* Center text inside the box */
-}
-
-.projects .project-box {
-    text-align: center; /* Center text inside the project box */
-    max-width: 800px; /* Set a max-width for project boxes */
-    margin: 20px auto; /* Center align the project boxes */
-}
-
-.projects img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 10px;
-}
-
-/* Cake Game Styles */
-#cake-container {
-    background-color: #fff4e9; /* light cream */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px; /* Set a max-width to prevent touching edges */
     margin: 20px auto;
-    text-align: center;
+    max-width: 1200px;
 }
 
-#cake {
-    width: 500px;
-    height: 500px;
-    border-radius: 10px;
-    object-fit: cover; /* Ensure the cake fits within its container */
+.box:hover, button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
 }
 
-#cake-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-#cake-buttons button {
-    padding: 10px 20px;
-    background-color: #9d8189;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 400;
-    transition: background-color 0.2s, transform 0.2s;
-}
-
-#cake-buttons button:hover {
-    background-color: #8c6d6a;
-    transform: scale(1.05);
-}
-
-/* About Me Page Styles */
-#timeline {
-    max-width: 1200px; /* Set a max-width to prevent touching edges */
-    margin: 0 auto; /* Center align the timeline */
-}
-
-.timeline-event {
-    background-color: #fff4e9; /* light cream */
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px;
-}
-
-.top-text-box {
-    background-color: #fff4e9; /* light cream */
-    padding: 20px;
-    border-radius: 10px;
+.box:active, button:active {
+    transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px; /* Adjust max-width to keep it centered */
-    margin: 20px auto;
-    text-align: center;
-}
-
-/* Projects Page */
-.projects .project-box {
-    background-color: #fff4e9; /* light cream */
-    text-align: center;
-    max-width: 800px; /* Set a max-width for project boxes */
-    margin: 20px auto; /* Center align the project boxes */
-}
-
-.projects img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 10px;
 }
 
 /* Back to Top Button */
@@ -186,7 +91,7 @@ header h1 {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #9d8189; /* Color matching header */
+    background-color: #9d8189;
     color: #fff;
     padding: 10px 20px;
     border: none;
