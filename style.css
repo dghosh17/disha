@@ -135,33 +135,31 @@ header h1 {
     transform: scale(1.05);
 }
 
-/* Timeline Section Styles */
+/* Timeline Section */
 .timeline {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 40px 0;
     position: relative;
 }
 
-.timeline h2 {
-    text-align: center;
-    color: #9d8189; /* Muted pink */
-    font-size: 2.5em;
-    margin-bottom: 30px;
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #9d8189; /* Muted pink */
 }
 
 .timeline-event {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 40px;
-    padding: 20px;
+    position: relative;
+    width: 45%; /* Reduce width to make room for the timeline line */
     background-color: #fff4e9; /* Light cream */
+    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    position: relative;
-    overflow: hidden;
+    margin-bottom: 40px;
     transition: transform 0.3s ease;
 }
 
@@ -173,7 +171,6 @@ header h1 {
 .timeline-event::before {
     content: '';
     position: absolute;
-    left: -20px;
     top: 50%;
     width: 15px;
     height: 15px;
@@ -182,55 +179,24 @@ header h1 {
     transform: translateY(-50%);
 }
 
-.timeline-event .year {
-    font-size: 2.5em;
-    color: #fff4e9; /* Light cream */
-    background-color: #9d8189; /* Muted pink */
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    margin-right: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    min-width: 120px;
-    text-align: center;
-}
-
-.timeline-event .description {
-    flex-grow: 1;
-    font-size: 1.2em;
-    color: #333; /* Darker text for readability */
-}
-
-.timeline-event:nth-child(odd) .description {
-    text-align: left;
-}
-
-.timeline-event:nth-child(even) .description {
+.timeline-event.left {
+    left: 0;
     text-align: right;
 }
 
-/* Lines between events */
-.timeline-line {
-    position: relative;
-    margin: 0 auto;
-    width: 2px;
-    height: 100%;
-    background-color: #9d8189; /* Muted pink */
+.timeline-event.left::before {
+    right: -20px; /* Position the dot near the timeline line */
 }
 
-.timeline-container {
-    position: relative;
-    margin: 0 auto;
-    padding: 0;
+.timeline-event.right {
+    right: 0;
+    text-align: left;
 }
 
-.timeline-event img {
-    width: 150px;
-    height: auto;
-    border-radius: 10px;
-    margin-left: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+.timeline-event.right::before {
+    left: -20px; /* Position the dot near the timeline line */
 }
+
 
 /* Slideshow styles (Home Page) */
 .slideshow-container img {
