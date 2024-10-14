@@ -11,9 +11,24 @@
     <header>
         <nav>
             <ul>
-                <li><a href="index.html"><img src="images/home.png" alt="Home"></a></li>
-                <li><a href="projects.html"><img src="images/projects.png" alt="Projects"></a></li>
-                <li><a href="about.html"><img src="images/about-me.png" alt="About Me"></a></li>
+                <li>
+                    <a href="index.html">
+                        <img src="images/home.png" alt="Home">
+                        <!-- <span class="nav-text">Home</span> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="projects.html">
+                        <img src="images/projects.png" alt="Projects">
+                        <!-- <span class="nav-text">Projects</span> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html">
+                        <img src="images/about-me.png" alt="About Me">
+                        <!-- <span class="nav-text">About Me</span> -->
+                    </a>
+                </li>
             </ul>
         </nav>
         <h1>Welcome to My Website!</h1>
@@ -24,13 +39,13 @@
         <div class="box gallery">
             <section class="gallery">
                 <div class="slideshow-container">
-                    <div class="mySlides fade">
+                    <div class="mySlides">
                         <img src="images/grainger_engineering.jpg" alt="Grainger Engineering">
                     </div>
-                    <div class="mySlides fade">
+                    <div class="mySlides">
                         <img src="images/computer_engineering.jpg" alt="Computer Engineering">
                     </div>
-                    <div class="mySlides fade">
+                    <div class="mySlides">
                         <img src="images/ece.jpg" alt="ECE Building">
                     </div>
                 </div>
@@ -58,8 +73,34 @@
             <label for="message">Your message:</label>
             <textarea id="message" name="message" required></textarea>
             
-            <button type="submit">SEND</button>
+            <button type="submit">Send</button>
         </form>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline box">
+        <h2>My Journey</h2>
+        <div class="timeline-event">
+            <div class="event-content">
+                <h3>2023</h3>
+                <p>Started my journey in Computer Engineering at UIUC, focusing on AI and Machine Learning.</p>
+            </div>
+            <div class="event-image">
+                <img src="images/2023_event.jpg" alt="Event in 2023">
+            </div>
+        </div>
+
+        <div class="timeline-event">
+            <div class="event-content">
+                <h3>2022</h3>
+                <p>Completed my first internship, working on developing AI-driven solutions for healthcare.</p>
+            </div>
+            <div class="event-image">
+                <img src="images/2022_event.jpg" alt="Event in 2022">
+            </div>
+        </div>
+
+        <!-- Add more timeline-event blocks as needed -->
     </section>
     
     <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
