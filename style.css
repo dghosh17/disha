@@ -57,18 +57,53 @@ header h1 {
 /* Main Content */
 .main-content {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: row; /* Arrange items in a row */
+    align-items: center; /* Vertically center items */
+    justify-content: space-around; /* Evenly distribute space around items */
+    flex-wrap: nowrap; /* Prevent wrapping */
     padding: 40px 20px;
-    text-align: center;
+    text-align: left; /* Align text to the left */
     margin-bottom: 20px;
 }
 
-.home-page img {
-    max-width: 100%;
+.image-container {
+    flex: 1;
+    max-width: 50%;
+    padding: 10px;
+}
+
+.image-container img {
+    width: 100%;
     height: auto;
     border-radius: 10px;
-    margin: 10px;
+}
+
+.text-container {
+    flex: 1;
+    max-width: 50%;
+    padding: 10px;
+}
+
+.text-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.text-container p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container, .text-container {
+        max-width: 100%;
+    }
 }
 
 /* General Box Styles */
@@ -101,7 +136,6 @@ header h1 {
     margin-bottom: 15px;
 }
 
-
 .project-box:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Lift up effect */
@@ -111,14 +145,27 @@ header h1 {
 .contact.box {
     max-width: 500px; /* Limit width for the contact box */
     text-align: center; /* Center text inside the box */
+    margin: 0 auto; /* Center the contact box */
+}
+
+.contact h2 {
+    font-size: 2.5em; /* Increased font size */
+    color: #9d8189; /* Optional: Ensure it stands out */
+    margin-bottom: 20px;
 }
 
 .contact input, .contact textarea {
-    width: 80%;
-    padding: 10px;
+    width: 70%; /* Reduced from 80% */
+    padding: 8px; /* Adjusted padding */
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1em; /* Ensure font size is readable */
+}
+
+.contact textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    height: 100px; /* Set a reasonable default height */
 }
 
 .contact button {
@@ -135,32 +182,22 @@ header h1 {
     transform: scale(1.05);
 }
 
-/* Timeline Section */
+/* Updated Timeline Section */
 .timeline {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 0;
-    position: relative;
-}
-
-.timeline-line {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 4px;
-    height: 100%;
-    background-color: #9d8189; /* Muted pink */
+    padding: 40px 20px;
 }
 
 .timeline-event {
-    position: relative;
-    width: 45%; /* Reduce width to make room for the timeline line */
+    display: flex;
+    align-items: center;
     background-color: #fff4e9; /* Light cream */
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    margin-bottom: 40px;
-    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .timeline-event:hover {
@@ -168,35 +205,55 @@ header h1 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.timeline-event::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 15px;
-    height: 15px;
-    background-color: #9d8189; /* Muted pink */
-    border-radius: 50%;
-    transform: translateY(-50%);
+.event-image {
+    flex: 0 0 200px; /* Fixed width for images */
+    margin-right: 20px;
 }
 
-.timeline-event.left {
-    left: 0;
-    text-align: right;
+.event-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /* Ensures image covers the container without distortion */
 }
 
-.timeline-event.left::before {
-    right: -20px; /* Position the dot near the timeline line */
+.event-content {
+    flex: 1;
 }
 
-.timeline-event.right {
-    right: 0;
-    text-align: left;
+.event-content h3 {
+    font-size: 1.8em;
+    color: #9d8189; /* Muted pink */
+    margin-bottom: 10px;
 }
 
-.timeline-event.right::before {
-    left: -20px; /* Position the dot near the timeline line */
+.event-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #6b5b5a; /* Slightly darker for better readability */
 }
 
+/* Responsive Design for Timeline */
+@media (max-width: 768px) {
+    .timeline-event {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .event-image {
+        flex: 0 0 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .event-content h3 {
+        font-size: 1.5em;
+    }
+    
+    .event-content p {
+        font-size: 1em;
+    }
+}
 
 /* Slideshow styles (Home Page) */
 .slideshow-container img {
