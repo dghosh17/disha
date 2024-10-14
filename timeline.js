@@ -11,11 +11,16 @@ document.addEventListener("DOMContentLoaded", function() {
         { year: 2024, event: 'As a freshman at the University of Illinois, I joined various clubs, participated in my first hackathon, and continued my teaching journey as a course assistant in CS124.' }
     ];
 
-    // Dynamically create timeline events
-    timelineEvents.forEach(event => {
+    // Dynamically create timeline events, alternating left and right
+    timelineEvents.forEach((event, index) => {
         const eventElement = document.createElement('div');
-        eventElement.classList.add('timeline-event');
-        eventElement.innerHTML = `<h3>${event.year}</h3><p>${event.event}</p><img src="images/${event.year}.png" alt="Event for ${event.year}">`;
+        const positionClass = index % 2 === 0 ? 'left' : 'right';
+        eventElement.classList.add('timeline-event', positionClass);
+        eventElement.innerHTML = `
+            <div class="year">${event.year}</div>
+            <div class="description">${event.event}</div>
+            <img src="images/${event.year}.png" alt="Event for ${event.year}">
+        `;
         timelineContainer.appendChild(eventElement);
     });
 });
