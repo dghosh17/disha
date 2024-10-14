@@ -57,40 +57,41 @@ header h1 {
 /* Main Content */
 .main-content {
     display: flex;
-    flex-direction: row; /* Arrange items in a row */
-    align-items: center; /* Vertically center items */
-    justify-content: space-between; /* Distribute space between items */
+    justify-content: space-around;
+    align-items: center;
     padding: 40px 20px;
     margin-bottom: 20px;
 }
 
-.image-container {
-    flex: 1;
-    max-width: 50%;
-    padding: 10px;
-}
-
-.image-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    display: block; /* Ensure no unexpected spacing */
-}
-
+/* Container for Text */
 .text-container {
     flex: 1;
-    max-width: 50%;
-    padding: 10px;
+    max-width: 600px;
+    text-align: center; /* Center the text inside */
+    padding: 20px;
 }
 
-.text-container h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+/* Container for Images */
+.image-container {
+    flex: 1;
+    max-width: 600px;
+    position: relative; /* For fade transition */
 }
 
-.text-container p {
-    font-size: 1.1em;
-    line-height: 1.6;
+/* Image Styles with Fade Transition */
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: opacity 1s ease-in-out; /* Fade effect */
+}
+
+.image-container img.fade {
+    opacity: 0;
+}
+
+.image-container img.show {
+    opacity: 1;
 }
 
 /* Responsive Design */
@@ -152,7 +153,7 @@ header h1 {
 }
 
 .contact h2 {
-    font-size: 2em; /* Adjusted font size */
+    font-size: 1.8em; /* Adjusted font size */
     color: #9d8189; /* Ensure it stands out */
     margin-bottom: 20px;
     font-weight: bold; /* Makes it bolder */
@@ -165,7 +166,7 @@ header h1 {
 }
 
 .form-group {
-    width: 100%; /* Ensure form groups take full width */
+    width: 80%; /* Ensure form groups take full width */
     margin-bottom: 15px;
     text-align: left; /* Align labels to the left */
 }
