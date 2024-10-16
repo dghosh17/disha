@@ -1,62 +1,59 @@
-<!-- about.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Disha Ghosh's Website</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@700&family=Spectral:wght@300&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">
-                        <img src="images/home.png" alt="Home">
-                        <!-- <span class="nav-text">Home</span> -->
-                    </a>
-                </li>
-                <li>
-                    <a href="projects.html">
-                        <img src="images/projects.png" alt="Projects">
-                        <!-- <span class="nav-text">Projects</span> -->
-                    </a>
-                </li>
-                <li>
-                    <a href="about.html">
-                        <img src="images/about-me.png" alt="About Me">
-                        <!-- <span class="nav-text">About Me</span> -->
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <h1>About Me</h1>
-    </header>
-    <!-- about.html -->
-<!-- Existing Scripts -->
-<script src="timeline.js"></script>
-<!-- AOS JS for Animations -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-    // Initialize AOS (Animate On Scroll) library
-    AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true,
-    });
-</script>
+<section id="timeline">
+    <!-- Intro Section Title -->
+    <h2>Click each picture to learn more about me growing up</h2>
 
+    <!-- First three large horizontal boxes -->
+    <div class="intro-timeline">
+        <!-- Event 1 -->
+        <div class="timeline-event">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/2005.png" alt="Event in 2005">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>2005</h3>
+                        <p>Hello World!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <!-- Timeline Section -->
-    <div class="timeline-container">
-        <div id="timeline" class="timeline">
-            <!-- Timeline events will be dynamically inserted here -->
+        <!-- Event 2 -->
+        <div class="timeline-event">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/2014.png" alt="Event in 2014">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>2014</h3>
+                        <p>Began to explore my passion for coding, diving into video game development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="timeline-event">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/2020.png" alt="Event in 2020">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>2020</h3>
+                        <p>Created my first solo video game using Maya and Unity.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Include your timeline JS -->
-    <script src="timeline.js"></script>
-</body>
-</html>
+    <!-- University Section -->
+    <h2>What am I up to now?</h2>
+    <div class="timeline-event university-event">
+        <h3>2024</h3>
+        <p>As a sophomore at the University of Illinois, I’m actively involved in clubs, participating in hackathons, and working as a course assistant in CS124.</p>
+    </div>
+</section>
