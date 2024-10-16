@@ -187,8 +187,8 @@ header h1 {
     padding: 20px; /* Padding inside the box */
     transition: transform 0.3s ease;
     position: relative;
-    width: 300px; /* Adjust width as needed */
-    height: 400px; /* Adjust height as needed */
+    width: 700px; /* Adjust width as needed */
+    height: 700px; /* Adjust height as needed */
 }
 
 .timeline-event-content {
