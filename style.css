@@ -60,12 +60,15 @@ header nav ul li a:hover {
 /* Navigation Icons Hover Effect */
 header nav ul li a img {
     transition: transform 0.3s, filter 0.3s; /* Smooth transition for scale and filter */
+    transform: scale(1); /* Initial scale for default state */
 }
 
 header nav ul li a:hover img {
     transform: scale(1.1) rotate(5deg); /* Tilt effect */
     filter: brightness(1.2); /* Glow effect */
 }
+
+/* Other styles remain unchanged... */
 
 header h1 {
     font-size: 2.5em;
