@@ -76,6 +76,12 @@ header h1 {
     color: #fff4e9; /* light cream */
     margin: 0;
 }
+h2 {
+    font-size: 18px; /* Set H2 font size to 18px */
+    font-family: 'Daydream', sans-serif; /* Ensure the right font is applied */
+    color: #9d8189; /* Your muted pink color */
+}
+
 
 /* Other styles remain unchanged... */
 
@@ -348,65 +354,56 @@ header h1 {
 }
 
 
-/* Flip Card Styles */
+/* Timeline Flip Box Styles */
+.timeline-container {
+    display: flex;
+    justify-content: space-between; /* Distribute the boxes evenly */
+    padding: 40px 20px;
+    max-width: 1200px; /* Set maximum width */
+    margin: 0 auto; /* Center align */
+    gap: 20px; /* Space between the boxes */
+}
+
 .flip-card {
-    background-color: transparent;
-    width: 150px; /* Adjust size as needed */
-    height: 150px; /* Adjust size as needed */
-    perspective: 1000px; /* Enables 3D effect */
+    width: 30%; /* Each flip card takes up 30% of the timeline container */
+    height: 300px; /* Adjust the height as needed */
+    background-color: #fff4e9; /* Light cream background */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    transition: transform 0.8s;
 }
 
 .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-}
-
-.flip-card-inner.flipped {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.flip-card-front {
-    /* Front face styling */
-}
-
-.flip-card-back {
-    background-color: ##f7c1cb; /* Match your theme color */
-    color: white;
-    transform: rotateY(180deg);
-    padding: 20px;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    transition: transform 0.8s;
 }
 
-.flip-card-back h3 {
-    margin-bottom: 10px;
-    font-size: 1.5em;
+.flip-card-front, .flip-card-back {
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
 }
 
-.flip-card-back p {
-    font-size: 1em;
-    padding: 0 10px;
-    text-align: center;
+.flip-card-back {
+    transform: rotateY(180deg);
+    background-color: #f7c1cb; /* Match your pink theme */
+    color: white;
 }
 
-/* Responsive Flip Card */
+/* Ensure responsive behavior for smaller screens */
 @media screen and (max-width: 768px) {
-    .flip-card-inner {
+    .timeline-container {
+        flex-direction: column; /* Stack flip boxes vertically on small screens */
+    }
+
+    .flip-card {
+        width: 100%; 
+    }
+}
+
        
