@@ -83,7 +83,37 @@ h2 {
 }
 
 
-/* Other styles remain unchanged... */
+/* Display Hamburger Menu */
+    .hamburger-menu {
+        display: block; /* Show hamburger icon on small screens */
+    }
+
+    /* Hide the navbar by default on small screens */
+    nav {
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        width: 100%;
+        background-color: #9d8189; /* Match header color */
+        display: none; /* Hidden by default */
+    }
+
+    /* Show navbar when active */
+    nav.active {
+        display: block;
+    }
+
+    /* Navbar items vertically aligned */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+}
+
 
 
 /* Main Content */
