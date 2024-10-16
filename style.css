@@ -170,46 +170,73 @@ header h1 {
     transform: scale(1.05);
 }
 
-//* Timeline Section */
+/* Updated Timeline Section */
 .timeline-container {
     padding: 40px 20px;
+    position: relative;
+    max-width: 1200px; /* Limit the width for better aesthetics */
+    margin: 0 auto; /* Center align the entire timeline */
 }
 
 .timeline-event {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center;
+    flex-direction: row; /* Place items side by side */
+    justify-content: space-between;
     align-items: center;
     background-color: #fff4e9; /* Light cream */
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     margin-bottom: 40px;
-    padding: 1px; /* Padding inside the box */
+    padding: 20px; /* Increased padding for a spacious feel */
     transition: transform 0.3s ease;
-    position: relative;
-    width: 700px; /* Adjust width as needed */
-    height: 700px; /* Adjust height as needed */
+    width: 100%; /* Take up full width */
+    max-width: 1000px; /* Adjust width for wider boxes */
 }
 
 .timeline-event-content {
-    text-align: center; /* Center align the text */
+    flex: 1;
+    text-align: left; /* Align text to the left */
+    padding: 20px;
 }
 
 .timeline-event .event-image {
-    width: 100%; /* Fill the width of the box */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Optional rounded corners */
+    width: 250px; /* Adjust size for the image */
+    height: auto;
+    border-radius: 10px;
 }
 
 .timeline-event h3 {
-    font-size: 1.8em; /* Increase font size for year */
-    margin: 10px 0; /* Margin above and below */
+    font-size: 2em; /* Increase font size for the event title */
+    margin: 10px 0;
     color: #9d8189; /* Muted pink */
 }
 
 .timeline-event p {
-    font-size: 1em; /* Adjust font size for description */
-    padding: 0 10px; /* Padding around description */
+    font-size: 1.2em; /* Slightly larger font size */
+    color: #333; /* Darker text color for better readability */
+}
+
+/* Hover effect */
+.timeline-event:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 768px) {
+    .timeline-event {
+        flex-direction: column; /* Stack vertically on small screens */
+        align-items: center;
+    }
+
+    .timeline-event-content {
+        text-align: center; /* Center text for mobile */
+        padding: 10px;
+    }
+
+    .timeline-event .event-image {
+        width: 100%; /* Full width image on small screens */
+    }
 }
 
 /* Projects Section */
