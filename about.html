@@ -6,28 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Disha Ghosh's Website</title>
     <link rel="stylesheet" href="style.css">
-   
+    <!-- Remove Google Fonts if not using them -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Karla:wght@700&family=Spectral:wght@300&display=swap" rel="stylesheet"> -->
 </head>
 <body>
     <header>
-        <nav>
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger-menu" id="hamburger-menu">☰</div>
+
+        <nav id="navbar">
             <ul>
                 <li>
                     <a href="index.html">
                         <img src="images/home.png" alt="Home">
-                        <!-- <span class="nav-text">Home</span> -->
                     </a>
                 </li>
                 <li>
                     <a href="projects.html">
                         <img src="images/projects.png" alt="Projects">
-                        <!-- <span class="nav-text">Projects</span> -->
                     </a>
                 </li>
                 <li>
                     <a href="about.html">
                         <img src="images/about-me.png" alt="About Me">
-                        <!-- <span class="nav-text">About Me</span> -->
                     </a>
                 </li>
             </ul>
@@ -120,6 +121,16 @@
             duration: 800,
             easing: 'ease-in-out',
             once: true,
+        });
+    </script>
+    <!-- Hamburger Menu Script -->
+    <script>
+        const hamburger = document.getElementById('hamburger-menu');
+        const navbar = document.getElementById('navbar');
+
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            hamburger.classList.toggle('active');
         });
     </script>
 </body>
