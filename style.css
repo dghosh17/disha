@@ -170,46 +170,46 @@ header h1 {
     transform: scale(1.05);
 }
 
-/* Timeline Section */
-.timeline {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 0;
+//* Timeline Section */
+.timeline-container {
+    padding: 40px 20px;
 }
 
 .timeline-event {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
     background-color: #fff4e9; /* Light cream */
-    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     margin-bottom: 40px;
+    padding: 20px; /* Padding inside the box */
     transition: transform 0.3s ease;
     position: relative;
+    width: 300px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
 }
 
-.timeline-event:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.timeline-event-content {
+    text-align: center; /* Center align the text */
 }
 
-.timeline-event img {
-    max-width: 40%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.timeline-event .event-details {
-    flex: 1;
-    margin-left: 20px;
-    text-align: left;
+.timeline-event .event-image {
+    width: 100%; /* Fill the width of the box */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional rounded corners */
 }
 
 .timeline-event h3 {
-    font-size: 1.5em;
-    font-weight: bold;
+    font-size: 1.8em; /* Increase font size for year */
+    margin: 10px 0; /* Margin above and below */
     color: #9d8189; /* Muted pink */
+}
+
+.timeline-event p {
+    font-size: 1em; /* Adjust font size for description */
+    padding: 0 10px; /* Padding around description */
 }
 
 /* Projects Section */
