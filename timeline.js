@@ -1,6 +1,6 @@
-// timeline.js
 document.addEventListener("DOMContentLoaded", function() {
     const timelineContainer = document.getElementById('timeline');
+    timelineContainer.innerHTML = ''; // Clear existing events
 
     // Define the events in your timeline
     const timelineEvents = [
