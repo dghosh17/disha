@@ -253,14 +253,16 @@ header h1 {
 
 /* --- New Styles for Flipping Timeline Events --- */
 
-/* Flipping Card Styles */
+/* Flip Card Container */
 .flip-card {
     background-color: transparent;
     width: 100%;
     height: 100%;
-    perspective: 1000px; /* Remove if not needed */
+    perspective: 1000px; /* Enables 3D effect */
+    margin-bottom: 40px; /* Space between events */
 }
 
+/* Flip Card Inner */
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -268,12 +270,20 @@ header h1 {
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    cursor: pointer;
 }
 
+/* Flip the card on hover (desktop) */
 .timeline-event:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
+/* Flip the card when 'flipped' class is added (click) */
+.flip-card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+/* Front and Back Faces */
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
@@ -283,16 +293,79 @@ header h1 {
     overflow: hidden;
 }
 
+/* Front Face */
 .flip-card-front {
-    /* Front face styling */
+    /* Optional: Add specific styles for the front face if needed */
 }
 
+/* Back Face */
 .flip-card-back {
-    background-color: #f39c12; /* Theme color */
+    background-color: #f39c12; /* Match your theme color */
     color: white;
     transform: rotateY(180deg);
     padding: 20px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Optional: Style for the year inside the back face */
+.flip-card-back h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+/* Responsive Flip Card */
+@media screen and (max-width: 768px) {
+    .flip-card-inner {
+        transform: none !important; /* Disable flip on smaller screens for better usability */
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: none;
+    }
+
+    .timeline-event {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flip-card-front, .flip-card-back {
+        width: 100%;
+    }
+}
+
+/* Timeline Container Styles */
+.timeline-container {
+    padding: 40px 20px;
+}
+
+.timeline {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Positioning the timeline events */
+.timeline-event.left {
+    align-self: flex-start;
+}
+
+.timeline-event.right {
+    align-self: flex-end;
+}
+
+/* Optional: Add a vertical line for the timeline */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #f39c12;
 }
 
 /* Responsive Flip Card */
