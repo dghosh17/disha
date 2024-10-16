@@ -165,7 +165,7 @@ header h1 {
     padding: 10px 20px;
     cursor: pointer;
     font-family: 'Daydream', sans-serif; /* Use Daydream font */
-    font-weight: 600;
+    font-weight: 400;
     transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -285,7 +285,7 @@ header h1 {
     border-radius: 5px;
     cursor: pointer;
     font-family: 'Daydream', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     transition: background-color 0.2s, transform 0.2s;
 }
 
