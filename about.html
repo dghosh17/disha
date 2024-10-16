@@ -11,30 +11,39 @@
 </head>
 <body>
     <header>
-        <!-- Hamburger Menu Icon -->
-        <div class="hamburger-menu" id="hamburger-menu">☰</div>
-
-        <nav id="navbar">
+        <nav>
             <ul>
                 <li>
                     <a href="index.html">
                         <img src="images/home.png" alt="Home">
+                        <!-- <span class="nav-text">Home</span> -->
                     </a>
                 </li>
                 <li>
                     <a href="projects.html">
                         <img src="images/projects.png" alt="Projects">
+                        <!-- <span class="nav-text">Projects</span> -->
                     </a>
                 </li>
                 <li>
                     <a href="about.html">
                         <img src="images/about-me.png" alt="About Me">
+                        <!-- <span class="nav-text">About Me</span> -->
                     </a>
                 </li>
             </ul>
         </nav>
         <h1>About Me</h1>
     </header>
+
+    <!-- Parallax Section (Optional: If you want it on the About page as well) -->
+    <!--
+    <section class="parallax">
+        <div class="welcome-text">
+            <h1>Welcome</h1>
+        </div>
+    </section>
+    -->
 
     <main>
         <section id="timeline">
@@ -98,6 +107,10 @@
         </section>
     </main>
 
+    <footer>
+        <p>&copy; 2024 Disha Ghosh. All rights reserved.</p>
+    </footer>
+
     <!-- Existing Scripts -->
     <script src="timeline.js"></script>
     <!-- AOS JS for Animations -->
@@ -108,16 +121,6 @@
             duration: 800,
             easing: 'ease-in-out',
             once: true,
-        });
-    </script>
-    <!-- Hamburger Menu Script -->
-    <script>
-        const hamburger = document.getElementById('hamburger-menu');
-        const navbar = document.getElementById('navbar');
-
-        hamburger.addEventListener('click', () => {
-            navbar.classList.toggle('active');
-            hamburger.classList.toggle('active');
         });
     </script>
 </body>
