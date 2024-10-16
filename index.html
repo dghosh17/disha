@@ -31,11 +31,12 @@
                 </li>
             </ul>
         </nav>
-        <h1>Homepage</h1>
+        <h1>Welcome to My Website!</h1>
     </header>
-        <!-- Parallax Section -->
+
+    <!-- Parallax Section -->
     <section class="parallax">
-        <div class="parallax-content" data-aos="fade-up">
+        <div class="parallax-content">
             <h2>Welcome to My Pixel World!</h2>
             <p>Explore my projects and timeline.</p>
         </div>
@@ -46,13 +47,13 @@
         <div class="box gallery">
             <section class="gallery">
                 <div class="slideshow-container">
-                    <div class="MySlides">
+                    <div class="mySlides">
                         <img src="images/grainger_engineering.jpg" alt="Grainger Engineering">
                     </div>
-                    <div class="MySlides">
+                    <div class="mySlides">
                         <img src="images/computer_engineering.jpg" alt="Computer Engineering">
                     </div>
-                    <div class="MySlides">
+                    <div class="mySlides">
                         <img src="images/ece.jpg" alt="ECE Building">
                     </div>
                 </div>
@@ -84,10 +85,34 @@
         </form>
     </section>
 
-    
     <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
     
     <script src="slideshow.js"></script>
     <script src="scroll.js"></script>
+    <!-- New Scripts for Parallax and Flip Cards -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS (Animate On Scroll) library
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+        });
+
+        // Parallax Content Animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const parallaxContent = document.querySelector('.parallax-content');
+        
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        parallaxContent.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+        
+            observer.observe(parallaxContent);
+        });
+    </script>
 </body>
 </html>
