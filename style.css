@@ -184,7 +184,7 @@ header h1 {
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     margin-bottom: 40px;
-    padding: 20px; /* Padding inside the box */
+    padding: 1px; /* Padding inside the box */
     transition: transform 0.3s ease;
     position: relative;
     width: 700px; /* Adjust width as needed */
@@ -297,7 +297,7 @@ header h1 {
 }
 
 .flip-card-back {
-    background-color: #f39c12; /* Match your theme color */
+    background-color: ##f7c1cb; /* Match your theme color */
     color: white;
     transform: rotateY(180deg);
     padding: 20px;
