@@ -179,52 +179,41 @@ header h1 {
 .timeline-container {
     padding: 40px 20px;
     position: relative;
-    max-width: 1200px; /* Limit the width for better aesthetics */
-    margin: 0 auto; /* Center align the entire timeline */
+    max-width: 1200px; /* Increase width limit */
+    margin: 0 auto; /* Center align */
 }
 
 .timeline-event {
     display: flex;
-    flex-direction: row; /* Place items side by side */
+    flex-direction: row; /* Items side by side */
     justify-content: space-between;
     align-items: center;
     background-color: #fff4e9; /* Light cream */
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     margin-bottom: 40px;
-    padding: 20px; /* Increased padding for a spacious feel */
+    padding: 30px; /* Increased padding for more space */
     transition: transform 0.3s ease;
-    width: 100%; /* Take up full width */
-    max-width: 1000px; /* Adjust width for wider boxes */
+    width: 100%; /* Full width */
+    max-width: 1100px; /* Adjust to make boxes wider */
+    min-height: 200px; /* Set minimum height for bigger boxes */
 }
 
 .timeline-event-content {
     flex: 1;
     text-align: left; /* Align text to the left */
-    padding: 20px;
-}
-
-.timeline-event .event-image {
-    width: 250px; /* Adjust size for the image */
-    height: auto;
-    border-radius: 10px;
+    padding: 30px; /* Increase padding for more space inside the content */
 }
 
 .timeline-event h3 {
-    font-size: 2em; /* Increase font size for the event title */
+    font-size: 2.5em; /* Increase font size for the event title */
     margin: 10px 0;
     color: #9d8189; /* Muted pink */
 }
 
 .timeline-event p {
-    font-size: 1.2em; /* Slightly larger font size */
-    color: #333; /* Darker text color for better readability */
-}
-
-/* Hover effect */
-.timeline-event:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    font-size: 1.5em; /* Slightly larger font size */
+    color: #333; /* Darker text for better readability */
 }
 
 /* Responsive for smaller screens */
@@ -235,12 +224,12 @@ header h1 {
     }
 
     .timeline-event-content {
-        text-align: center; /* Center text for mobile */
-        padding: 10px;
+        text-align: center; /* Center text on mobile */
+        padding: 20px;
     }
 
     .timeline-event .event-image {
-        width: 100%; /* Full width image on small screens */
+        width: 100%; /* Full-width image on small screens */
     }
 }
 
