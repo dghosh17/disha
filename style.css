@@ -6,7 +6,6 @@
 @font-face {
     font-family: 'Pixel Operator';
     src: url('PixelOperator.ttf') format('truetype'); 
-    font-size: 14px;
 }
 
 /* Existing General Styles */
@@ -58,12 +57,25 @@ header nav ul li a:hover {
     border-bottom: 2px solid #f39c12;
 }
 
+/* Navigation Icons Hover Effect */
+header nav ul li a img {
+    transition: transform 0.3s, filter 0.3s; /* Smooth transition for scale and filter */
+}
+
+header nav ul li a:hover img {
+    transform: scale(1.1) rotate(5deg); /* Tilt effect */
+    filter: brightness(1.2); /* Glow effect */
+}
+
 header h1 {
     font-size: 2.5em;
     font-family: 'Daydream', sans-serif; /* Change to Daydream for titles */
     color: #fff4e9; /* light cream */
     margin: 0;
 }
+
+/* Other styles remain unchanged... */
+
 
 /* Main Content */
 .main-content {
