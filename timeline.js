@@ -1,3 +1,4 @@
+// timeline.js
 document.addEventListener("DOMContentLoaded", function() {
     const timelineContainer = document.getElementById('timeline');
 
@@ -11,16 +12,47 @@ document.addEventListener("DOMContentLoaded", function() {
         { year: 2024, event: 'As a freshman at the University of Illinois, I joined various clubs, participated in my first hackathon, and continued my teaching journey as a course assistant in CS124.' }
     ];
 
-    // Dynamically create timeline events, alternating left and right
+    // Dynamically create timeline events with flipping cards, alternating left and right
     timelineEvents.forEach((event, index) => {
         const eventElement = document.createElement('div');
         const positionClass = index % 2 === 0 ? 'left' : 'right';
-        eventElement.classList.add('timeline-event', positionClass);
+        eventElement.classList.add('timeline-event', positionClass, 'flip-card');
+        eventElement.setAttribute('data-aos', 'flip-left'); // Add AOS attribute for animation
+
         eventElement.innerHTML = `
-            <div class="year">${event.year}</div>
-            <div class="description">${event.event}</div>
-            <img src="images/${event.year}.png" alt="Event for ${event.year}">
+            <div class="flip-card-inner" tabindex="0" role="button" aria-pressed="false">
+                <div class="flip-card-front">
+                    <img src="images/${event.year}.png" alt="Event in ${event.year}">
+                </div>
+                <div class="flip-card-back">
+                    <h3>${event.year}</h3>
+                    <p>${event.event}</p>
+                </div>
+            </div>
         `;
+
         timelineContainer.appendChild(eventElement);
+    });
+
+    // Flip Card Click Functionality for Mobile and Accessibility
+    const flipCards = document.querySelectorAll('.flip-card-inner');
+
+    flipCards.forEach(card => {
+        // Click event
+        card.addEventListener('click', () => {
+            card.classList.toggle('flipped');
+            const isFlipped = card.classList.contains('flipped');
+            card.setAttribute('aria-pressed', isFlipped);
+        });
+
+        // Keyboard event
+        card.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                card.classList.toggle('flipped');
+                const isFlipped = card.classList.contains('flipped');
+                card.setAttribute('aria-pressed', isFlipped);
+            }
+        });
     });
 });
