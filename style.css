@@ -72,13 +72,13 @@ header nav ul li a:hover img {
 
 header h1 {
     font-size: 2.5em;
-    font-family: 'Pixel Operator', sans-serif; /* Change to Daydream for titles */
+    font-family: 'Daydream', sans-serif; /* Change to Daydream for titles */
     color: #fff4e9; /* light cream */
     margin: 0;
 }
 h2 {
     font-size: 18px; /* Set H2 font size to 18px */
-    font-family: 'Daydream', sans-serif; /* Ensure the right font is applied */
+    font-family: 'Pixel Operator', sans-serif; /* Ensure the right font is applied */
     color: #9d8189; /* Your muted pink color */
 }
 
