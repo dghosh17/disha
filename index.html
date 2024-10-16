@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disha Ghosh's Website</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@700&family=Spectral:wght@300&display=swap" rel="stylesheet">
+    <!-- Remove Google Fonts if not using them -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Karla:wght@700&family=Spectral:wght@300&display=swap" rel="stylesheet"> -->
 </head>
 <body>
     <header>
@@ -31,14 +33,13 @@
                 </li>
             </ul>
         </nav>
-        <h1>Homepage</h1>
+        <h1>Welcome to My Website!</h1>
     </header>
 
     <!-- Parallax Section -->
     <section class="parallax">
-        <div class="parallax-content">
-            <h2>Welcome to My Pixel World!</h2>
-            <p>Explore my projects and timeline.</p>
+        <div class="welcome-text">
+            <h1>Welcome</h1>
         </div>
     </section>
 
@@ -47,13 +48,13 @@
         <div class="box gallery">
             <section class="gallery">
                 <div class="slideshow-container">
-                    <div class="mySlides">
+                    <div class="fade">
                         <img src="images/grainger_engineering.jpg" alt="Grainger Engineering">
                     </div>
-                    <div class="mySlides">
+                    <div class="fade">
                         <img src="images/computer_engineering.jpg" alt="Computer Engineering">
                     </div>
-                    <div class="mySlides">
+                    <div class="fade">
                         <img src="images/ece.jpg" alt="ECE Building">
                     </div>
                 </div>
@@ -84,12 +85,14 @@
             <button type="submit">Send</button>
         </form>
     </section>
-
+    
     <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
     
+    <!-- Existing Scripts -->
     <script src="slideshow.js"></script>
     <script src="scroll.js"></script>
-    <!-- New Scripts for Parallax and Flip Cards -->
+    
+    <!-- AOS JS for Animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         // Initialize AOS (Animate On Scroll) library
@@ -97,21 +100,6 @@
             duration: 800,
             easing: 'ease-in-out',
             once: true,
-        });
-
-        // Parallax Content Animation
-        document.addEventListener('DOMContentLoaded', () => {
-            const parallaxContent = document.querySelector('.parallax-content');
-        
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        parallaxContent.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-        
-            observer.observe(parallaxContent);
         });
     </script>
 </body>
