@@ -7,9 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
         { year: 2005, event: 'Hello World!' },
         { year: 2014, event: 'Began to explore my passion for coding, diving into video game development across various platforms.' },
         { year: 2020, event: 'Created my first solo video game using Maya and Unity, and enrolled in online coding courses at my local community college to learn more.' },
-        { year: 2022, event: 'Joined CosmoCoding as a student teacher, mentoring younger students and sharing my love for coding.' },
-        { year: 2023, event: 'Started interning in the ASPIRE biotechnology program, where I discovered the interdisciplinary nature of computing and its broad applications.' },
-        { year: 2024, event: 'As a freshman at the University of Illinois, I joined various clubs, participated in my first hackathon, and continued my teaching journey as a course assistant in CS124.' }
     ];
 
     // Dynamically create timeline events with flipping cards, alternating left and right
