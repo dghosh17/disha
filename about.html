@@ -1,9 +1,10 @@
+<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Disha Ghosh</title>
+    <title>About Me - Disha Ghosh's Website</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@700&family=Spectral:wght@300&display=swap" rel="stylesheet">
 </head>
@@ -11,38 +12,37 @@
     <header>
         <nav>
             <ul>
-                <li><a href="index.html"><img src="images/home.png" alt="Home"></a></li>
-                <li><a href="projects.html"><img src="images/projects.png" alt="Projects"></a></li>
-                <li><a href="about.html"><img src="images/about-me.png" alt="About Me"></a></li>
+                <li>
+                    <a href="index.html">
+                        <img src="images/home.png" alt="Home">
+                        <!-- <span class="nav-text">Home</span> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="projects.html">
+                        <img src="images/projects.png" alt="Projects">
+                        <!-- <span class="nav-text">Projects</span> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html">
+                        <img src="images/about-me.png" alt="About Me">
+                        <!-- <span class="nav-text">About Me</span> -->
+                    </a>
+                </li>
             </ul>
         </nav>
         <h1>About Me</h1>
     </header>
 
-    <section class="greeting box">
-        <h2 id="greeting-message"></h2>
-        <p>Scroll down to discover more about me.</p>
-    </section>
-
-
-    <section class="timeline box">
-        <h2>My Journey</h2>
-        <div id="timeline" class="timeline-container">
-      
-            <div class="timeline-event">
-                <div class="timeline-text">
-                    <h3>Started College</h3>
-                    <p>Joined UIUC to study Computer Engineering.</p>
-                </div>
-                <img src="images/college.jpg" alt="College Image">
-            </div>
+    <!-- Timeline Section -->
+    <div class="timeline-container">
+        <div id="timeline" class="timeline">
+            <!-- Timeline events will be dynamically inserted here -->
         </div>
-    </section>
+    </div>
 
-    <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
-
-    <script src="greeting.js"></script>
+    <!-- Include your timeline JS -->
     <script src="timeline.js"></script>
-    <script src="scroll.js"></script>
 </body>
 </html>
