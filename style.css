@@ -69,7 +69,7 @@ header nav ul li a:hover img {
 
 header h1 {
     font-size: 2.5em;
-    font-family: 'Pixel-Operator', sans-serif; /* Change to Daydream for titles */
+    font-family: 'Pixel-Operator', sans-serif; 
     color: #fff4e9; /* light cream */
     margin: 0;
 }
@@ -174,7 +174,7 @@ header h1 {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    font-family: 'Daydream', sans-serif; /* Use Daydream font */
+    font-family: 'Pixel Operator', sans-serif;
     font-weight: 400;
     transition: background-color 0.3s, transform 0.3s;
 }
@@ -282,7 +282,7 @@ header h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Daydream', sans-serif;
+    font-family: 'Pixel Operator', sans-serif;
     font-weight: 400;
     transition: background-color 0.2s, transform 0.2s;
 }
@@ -405,7 +405,7 @@ header h1 {
     transform: translate(-50%, -50%);
     z-index: 3;
     color: #fff;
-    font-family: 'Daydream', sans-serif;
+    font-family: 'Pixel-Operator', sans-serif;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Optional: Add text shadow for readability */
 }
 
