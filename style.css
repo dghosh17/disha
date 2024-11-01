@@ -292,7 +292,17 @@ header h1 {
     transform: scale(1.05);
 }
 
+
 /* Flip Card Styles */
+.flip-cards-container {
+    display: flex;
+    justify-content: space-around; /* Space between cards */
+    align-items: center; /* Align cards to the center */
+    flex-wrap: wrap; /* Allow wrapping to a new line */
+    gap: 20px; /* Space between cards */
+    margin: 20px auto; /* Center the container */
+    max-width: 1200px; /* Adjust as needed */
+}
 .flip-card {
     background-color: transparent;
     width: 150px; /* Adjust size as needed */
