@@ -7,9 +7,11 @@
     font-family: 'Pixel Operator';
     src: url('fonts/PixelOperator.ttf') format('truetype'); 
 }
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); /* Import VT323 font */
+
 
 body {
-    font-family: 'Pixel Operator', sans-serif; /* Change to Pixel Operator */
+    font-family: 'VT323', sans-serif; 
     background-color: #e7d8c9; /* dark cream background */
     color: #9d8189; /* text color */
     margin: 0;
@@ -46,7 +48,7 @@ header nav ul li a {
     color: #fff4e9; /* light cream */
     text-decoration: none;
     font-weight: 300;
-    font-family: 'Pixel Operator', serif;
+    font-family: 'VT323', serif;
     transition: color 0.3s, border-bottom 0.3s;
     border-bottom: 2px solid transparent;
 }
@@ -69,7 +71,7 @@ header nav ul li a:hover img {
 
 header h1 {
     font-size: 2.5em;
-    font-family: 'Pixel-Operator', sans-serif; 
+    font-family: 'VT323', sans-serif; 
     color: #fff4e9; /* light cream */
     margin: 0;
 }
@@ -78,7 +80,7 @@ header h1 {
 .main-content {
     display: flex;
     flex-wrap: wrap;
-    font-family: 'Pixel-Operator', sans-serif;
+    font-family: 'VT323', sans-serif;
     justify-content: space-around;
     padding: 40px 20px;
     text-align: center;
@@ -174,7 +176,7 @@ header h1 {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    font-family: 'Pixel Operator', sans-serif;
+    font-family: 'VT323', sans-serif;
     font-weight: 400;
     transition: background-color 0.3s, transform 0.3s;
 }
@@ -282,7 +284,7 @@ header h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Pixel Operator', sans-serif;
+    font-family: 'PVT323', sans-serif;
     font-weight: 400;
     transition: background-color 0.2s, transform 0.2s;
 }
@@ -415,7 +417,7 @@ header h1 {
     transform: translate(-50%, -50%);
     z-index: 3;
     color: #fff;
-    font-family: 'Pixel-Operator', sans-serif;
+    font-family: 'VT323', sans-serif;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Optional: Add text shadow for readability */
 }
 
