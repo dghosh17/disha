@@ -437,7 +437,7 @@ header h1 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%; /* Stretches horizontally */
-    width: 150%
+    width: 130%
     position: relative;
     display: flex;
     align-items: center;
@@ -451,7 +451,7 @@ header h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
-    color: #e7d8c9; /* Beige color for welcome text */
+    color: #fff4e9; /* Beige color for welcome text */
     font-family: 'Pixel Operator', sans-serif;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
