@@ -294,16 +294,17 @@ header h1 {
 }
 
 /* Darker Box Container for Flip Cards */
-.darker-container {
-    background-color: #9d8189; /* Darker muted pink */
-    padding: 40px; /* Padding for spacing around flip cards */
+.about-container {
+    background-color: #9d8189; /* Darker background */
+    padding: 40px 20px;
     border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center; /* Center align the flip cards */
-    gap: 30px; /* Spacing between flip cards */
-    margin: 40px auto; /* Center on the page */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
 }
 
 /* Flip Card Styles */
