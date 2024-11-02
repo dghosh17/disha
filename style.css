@@ -436,7 +436,8 @@ header h1 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% 100%; /* Stretches horizontally */
+    background-size: 100%; /* Stretches horizontally */
+    width: 150%
     position: relative;
     display: flex;
     align-items: center;
@@ -456,7 +457,7 @@ header h1 {
 }
 
 .welcome-text h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 0;
 }
 
