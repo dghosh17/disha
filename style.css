@@ -389,7 +389,7 @@ header h1 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%; /* Stretches horizontally */
-    width: 130%; /* Ensures extended width */
+    width: 150%; /* Ensures extended width */
     position: relative;
     display: flex;
     align-items: center;
