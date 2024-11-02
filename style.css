@@ -47,7 +47,7 @@ header nav ul li a {
     color: #fff4e9; /* light cream */
     text-decoration: none;
     font-weight: 300;
-    font-family: 'Pixel Operator', serif;
+    font-family: 'Daydream', serif;
     transition: color 0.3s, border-bottom 0.3s;
     border-bottom: 2px solid transparent;
 }
