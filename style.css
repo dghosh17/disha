@@ -295,7 +295,7 @@ header h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
     box-sizing: border-box;
 }
 
@@ -309,12 +309,12 @@ header h1 {
     background-color: #9d8189; /* Light pink */
     color: white;
     transform: rotateY(180deg);
-    font-size: 1em;
+    font-size: 2em;
 }
 
 .flip-card-back h3 {
     margin-bottom: 10px;
-    font-size: 1.2em;
+    font-size: 2em;
 }
 
 @media screen and (max-width: 768px) {
