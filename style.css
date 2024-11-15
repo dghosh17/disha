@@ -371,22 +371,22 @@ header h1 {
 
 
 .parallax {
-    background-image: url('images/parallax-bg.jpg'); 
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), #e7d8c9);
+    background-image: url('images/parallax-background.png'); 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%; /* Stretches horizontally */
-    width: 150%; /* Ensures extended width */
+    background-size: cover;
     position: relative;
+    height: 100vh; /* Full screen height */
+    width: 100%; 
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow: hidden; /* Prevents any element from spilling out */
+    overflow: hidden; /* Prevent any element from spilling out */
+    transition: opacity 0.3s ease; /* Smooth fading */
 }
 
-/* Adding the fade effect */
 .parallax::before {
     content: "";
     position: absolute;
@@ -394,8 +394,8 @@ header h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 70%);
-    z-index: 2; /* Places it below the text but above the background */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    z-index: 1; /* Places it below the content */
     pointer-events: none; /* Allows interaction with elements underneath */
 }
 
