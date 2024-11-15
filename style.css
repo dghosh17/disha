@@ -289,8 +289,8 @@ header h1 {
 
 /* Flip Card Styles */
 .flip-card {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     perspective: 1000px;
 }
 
@@ -366,8 +366,8 @@ header h1 {
 
 
 .parallax {
-    background-image: url('images/parallax-background.png'); /* Ensure the path is correct */
-    height: 500px; /* Adjust height if necessary */
+    background-image: linear-gradient(to bottom, #e7d8c9, rgba(231, 216, 201, 0.8), transparent),
+        url('images/parallax-bg.jpg'); 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
