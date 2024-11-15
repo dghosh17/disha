@@ -331,7 +331,7 @@ header h1 {
     background-color: #9d8189; /* Light pink */
     color: white;
     transform: rotateY(180deg);
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .flip-card-back h3 {
