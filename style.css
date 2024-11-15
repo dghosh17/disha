@@ -255,6 +255,28 @@ header h1 {
     font-family: 'Pixel Operator', sans-serif;
     font-size: 1.2em;
 }
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Centers timeline vertically */
+    text-align: center; /* Centers text inside each event */
+}
+
+.intro-timeline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center-align the timeline events */
+    gap: 20px; /* Space between flip cards */
+}
+
+.timeline-event {
+    display: flex;
+    justify-content: center; /* Center-align each timeline event */
+    align-items: center;
+    margin: 10px;
+}
+
 
 /* Flip Cards Container */
 .flip-cards-container {
