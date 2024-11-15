@@ -265,9 +265,10 @@ header h1 {
 
 .intro-timeline {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: ce;
     justify-content: center; /* Center-align the timeline events */
     gap: 20px; /* Space between flip cards */
+    margin-top: 20px;
 }
 
 .timeline-event {
@@ -292,6 +293,7 @@ header h1 {
     width: 200px;
     height: 200px;
     perspective: 1000px;
+    margin: 0 auto; /* new so fix if neede*/
 }
 
 .flip-card-inner {
